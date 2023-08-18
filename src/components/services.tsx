@@ -49,7 +49,7 @@ export default function Services() {
 
   return (
     <section id="services" className="flex flex-col gap-4 w-full">
-      <h3 className="scroll-m-20 text-lg md:text-xl font-semibold tracking-tight mb-4 text-center">
+      <h3 className="scroll-m-20 text-lg md:text-xl font-semibold tracking-tight mb-2 lg:mb-4 text-center">
         Наши услуги:
       </h3>
       <Table className="text-xs md:text-sm">

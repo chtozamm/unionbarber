@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -10,6 +9,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
@@ -18,29 +18,6 @@ import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 export default function Navigation() {
   const [menuOpened, setMenuOpened] = useState(false);
-
-  const wrapperRef = useRef(null);
-  useOutsideAlerter(wrapperRef);
-
-  function useOutsideAlerter(ref: React.RefObject<any>) {
-    useEffect(() => {
-      /**
-       * Alert if clicked on outside of element
-       */
-      function handleClickOutside(event: Event) {
-        if (menuOpened && ref.current && !ref.current.contains(event.target)) {
-          alert("You clicked outside of me!");
-        }
-      }
-      // Bind the event listener
-      document.addEventListener("mousedown", handleClickOutside);
-      return () => {
-        // Unbind the event listener on clean up
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    }, [ref]);
-  }
-
   return (
     <>
       <button
@@ -56,61 +33,39 @@ export default function Navigation() {
         />
       </button>
       <div
-        ref={wrapperRef}
         className={cn(
-          "absolute bg-white left-0 top-0 z-50 border mt-28 md:hidden w-screen aspect-video rounded-none flex justify-center items-center",
-          menuOpened ? "flex" : "hidden"
+          "absolute bg-white left-0 top-0 z-50 border mt-28 md:hidden w-screen aspect-video rounded-none grid grid-cols-2 p-3",
+          menuOpened
+            ? "grid animate-in slide-in-from-top-2 fade-in-0 zoom-in-95"
+            : "animate-out fade-out-0 zoom-out-95 hidden"
         )}
       >
-        {/* <NavigationMenu>
-          <NavigationMenuList className="absolute flex flex-col">
-            <NavigationMenuItem>
-              <Link href={"/"} className={navigationMenuTriggerStyle()}>
-                Главная
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link
-                href={"/#services"}
-                className={navigationMenuTriggerStyle()}
-              >
-                Услуги
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>О нас</NavigationMenuTrigger>
-              <NavigationMenuContent className="">
-                <ul className="grid gap-3 p-4 w-full md:w-[400px]">
-                  <ListItem href="#" title="Наша команда">
-                    Знакомство с нашим коллективом.
-                  </ListItem>
-                  <ListItem href="#" title="Наши работы">
-                    Фотографии работ, выполненных нашими мастерами.
-                  </ListItem>
-                  <ListItem href="#" title="Контакты">
-                    Мы на карте, в телефонной книге, в социальных сетях.
-                  </ListItem>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Sheet>
-                <SheetTrigger className={navigationMenuTriggerStyle()}>
-                  <strong>Записаться</strong>
-                </SheetTrigger>
-                <SheetContent className="fixed w-full px-0 pb-0  md:max-w-2xl ">
-                  <iframe
-                    height="100%"
-                    width="100%"
-                    className="scale-90 rounded-3xl"
-                    id="ms_booking_iframe"
-                    src="https://w891186.yclients.com/"
-                  ></iframe>
-                </SheetContent>
-              </Sheet>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu> */}
+        <nav className="flex flex-col justify-center items-start">
+          <Link href={"/"} className={navigationMenuTriggerStyle()}>
+            Главная
+          </Link>
+          <Link href={"/#services"} className={navigationMenuTriggerStyle()}>
+            Услуги
+          </Link>
+          <Link href={"/"} className={navigationMenuTriggerStyle()}>
+            О нас
+          </Link>
+          <Sheet>
+            <SheetTrigger className={navigationMenuTriggerStyle()}>
+              <strong>Записаться</strong>
+            </SheetTrigger>
+            <SheetContent className="fixed w-full px-0 pb-0  md:max-w-2xl ">
+              <iframe
+                height="100%"
+                width="100%"
+                className="scale-90 rounded-3xl"
+                id="ms_booking_iframe"
+                src="https://w891186.yclients.com/"
+              ></iframe>
+            </SheetContent>
+          </Sheet>
+        </nav>
+        <div className="rounded-md bg-zinc-100 p-8 h-full"></div>
       </div>
 
       <NavigationMenu>
@@ -130,13 +85,13 @@ export default function Navigation() {
             <NavigationMenuContent>
               <ul className="grid gap-3 p-4 w-full md:w-[400px]">
                 <ListItem href="#" title="Наша команда">
-                  Знакомство с нашим коллективом.
+                  Знакомство с нашим коллективом
                 </ListItem>
                 <ListItem href="#" title="Наши работы">
-                  Фотографии работ, выполненных нашими мастерами.
+                  Фотографии работ, выполненных нашими мастерами
                 </ListItem>
                 <ListItem href="#" title="Контакты">
-                  Мы на карте, в телефонной книге, в социальных сетях.
+                  Мы на карте, в телефонной книге, в социальных сетях
                 </ListItem>
               </ul>
             </NavigationMenuContent>
