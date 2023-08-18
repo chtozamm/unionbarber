@@ -20,7 +20,7 @@ export default function About() {
         </li>
         <li className="">
           <Link
-            href="#"
+            href="/about#team"
             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
           >
             <div className="text-sm font-medium leading-none">Наша команда</div>
@@ -29,7 +29,7 @@ export default function About() {
             </p>
           </Link>
           <Link
-            href="#"
+            href="/about#work"
             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
           >
             <div className="text-sm font-medium leading-none">Наши работы</div>
@@ -38,7 +38,7 @@ export default function About() {
             </p>
           </Link>
           <Link
-            href="#"
+            href="/about#contact"
             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
           >
             <div className="text-sm font-medium leading-none">Контакты</div>

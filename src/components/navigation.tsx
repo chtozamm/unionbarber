@@ -18,6 +18,7 @@ import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 export default function Navigation() {
   const [menuOpened, setMenuOpened] = useState(false);
+
   return (
     <>
       <button
@@ -34,20 +35,32 @@ export default function Navigation() {
       </button>
       <div
         className={cn(
-          "absolute bg-white left-0 top-0 z-50 border mt-28 md:hidden w-screen aspect-video rounded-none grid grid-cols-2 p-3",
+          "absolute bg-white -left-full z-50 border top-0 mt-24 md:hidden w-screen aspect-video transition duration-300 ease-in-out rounded-none grid grid-cols-2 p-3",
           menuOpened
-            ? "grid animate-in slide-in-from-top-2 fade-in-0 zoom-in-95"
-            : "animate-out fade-out-0 zoom-out-95 hidden"
+            ? "animate-in fade-in-0 translate-x-full"
+            : "animate-out fade-out-0 pointer-events-none"
         )}
       >
-        <nav className="flex flex-col justify-center items-start">
-          <Link href={"/"} className={navigationMenuTriggerStyle()}>
+        <nav className="relative flex flex-col justify-center items-start">
+          <Link
+            href={"/"}
+            className={navigationMenuTriggerStyle()}
+            onClick={() => setMenuOpened(false)}
+          >
             Главная
           </Link>
-          <Link href={"/#services"} className={navigationMenuTriggerStyle()}>
+          <Link
+            href={"/#services"}
+            className={navigationMenuTriggerStyle()}
+            onClick={() => setMenuOpened(false)}
+          >
             Услуги
           </Link>
-          <Link href={"/"} className={navigationMenuTriggerStyle()}>
+          <Link
+            href={"/about"}
+            className={navigationMenuTriggerStyle()}
+            onClick={() => setMenuOpened(false)}
+          >
             О нас
           </Link>
           <Sheet>
@@ -84,15 +97,22 @@ export default function Navigation() {
             <NavigationMenuTrigger>О нас</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-4 w-full md:w-[400px]">
-                <ListItem href="#" title="Наша команда">
-                  Знакомство с нашим коллективом
-                </ListItem>
-                <ListItem href="#" title="Наши работы">
-                  Фотографии работ, выполненных нашими мастерами
-                </ListItem>
-                <ListItem href="#" title="Контакты">
-                  Мы на карте, в телефонной книге, в социальных сетях
-                </ListItem>
+                <Link href="/about#team">
+                  <ListItem title="Наша команда">
+                    Знакомство с нашим коллективом
+                  </ListItem>
+                </Link>
+                <Link href="/about#work">
+                  <ListItem title="Наши работы">
+                    Фотографии работ, выполненных нашими мастерами
+                  </ListItem>
+                </Link>
+
+                <Link href="/about#contact">
+                  <ListItem title="Контакты">
+                    Мы на карте, в телефонной книге, в социальных сетях
+                  </ListItem>
+                </Link>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -105,6 +125,7 @@ export default function Navigation() {
                 <iframe
                   height="100%"
                   width="100%"
+                  className="scale-90 rounded-3xl"
                   id="ms_booking_iframe"
                   src="https://w891186.yclients.com/"
                 ></iframe>
