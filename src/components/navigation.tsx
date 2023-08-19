@@ -15,6 +15,7 @@ import Link from "next/link";
 import React from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
+import { ImageIcon, Map, Users2 } from "lucide-react";
 
 export default function Navigation() {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -28,8 +29,8 @@ export default function Navigation() {
         <HamburgerMenuIcon
           className={
             menuOpened
-              ? "transition duration-300 rotate-180"
-              : "transition duration-300 rotate--180"
+              ? "transition duration-300 rotate-180 h-4 w-4"
+              : "transition duration-300 rotate--180 h-4 w-4"
           }
         />
       </button>
@@ -97,21 +98,41 @@ export default function Navigation() {
             <NavigationMenuTrigger>О нас</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-4 w-full md:w-[400px]">
-                <Link href="/about#team">
-                  <ListItem title="Наша команда">
-                    Знакомство с нашим коллективом
-                  </ListItem>
+                <Link
+                  href="/about#team"
+                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                >
+                  <div className="text-sm font-medium leading-none">
+                    <Users2 className=" h-4 w-4 mr-1 mb-0.5 inline-block" />
+                    Наша команда
+                  </div>
+                  <p className="line-clamp-3 text-xs sm:text-sm leading-snug text-gray-500">
+                    Барберы, администраторы и все причастные
+                  </p>
                 </Link>
-                <Link href="/about#work">
-                  <ListItem title="Наши работы">
-                    Фотографии работ, выполненных нашими мастерами
-                  </ListItem>
+                <Link
+                  href="/about#work"
+                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                >
+                  <div className="text-sm font-medium leading-none">
+                    <ImageIcon className="w-4 h-4 mr-1 mb-0.5 inline-block" />
+                    Наши работы
+                  </div>
+                  <p className="line-clamp-3 text-xs sm:text-sm leading-snug text-gray-500">
+                    Альбом с работами, выполненными нашими мастерами
+                  </p>
                 </Link>
-
-                <Link href="/about#contact">
-                  <ListItem title="Контакты">
-                    Мы на карте, в телефонной книге, в социальных сетях
-                  </ListItem>
+                <Link
+                  href="/about#contact"
+                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                >
+                  <div className="text-sm font-medium leading-none">
+                    <Map className="w-4 h-4 mr-1 mb-0.5 inline-block" />
+                    Контакты
+                  </div>
+                  <p className="line-clamp-3 text-xs sm:text-sm leading-snug text-gray-500">
+                    Филиалы, телефон, социальные сети
+                  </p>
                 </Link>
               </ul>
             </NavigationMenuContent>
@@ -138,28 +159,28 @@ export default function Navigation() {
   );
 }
 
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-gray-500">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  );
-});
-ListItem.displayName = "ListItem";
+// const ListItem = React.forwardRef<
+//   React.ElementRef<"a">,
+//   React.ComponentPropsWithoutRef<"a">
+// >(({ className, title, children, ...props }, ref) => {
+//   return (
+//     <li>
+//       <NavigationMenuLink asChild>
+//         <a
+//           ref={ref}
+//           className={cn(
+//             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+//             className
+//           )}
+//           {...props}
+//         >
+//           <div className="text-sm font-medium leading-none">{title}</div>
+//           <p className="line-clamp-2 text-sm leading-snug text-gray-500">
+//             {children}
+//           </p>
+//         </a>
+//       </NavigationMenuLink>
+//     </li>
+//   );
+// });
+// ListItem.displayName = "ListItem";

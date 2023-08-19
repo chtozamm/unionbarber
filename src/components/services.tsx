@@ -11,6 +11,7 @@ import { Baby, RussianRuble } from "lucide-react";
 import { ChevronRight } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Balancer from "react-wrap-balancer";
+import Link from "next/link";
 
 export default function Services() {
   const services = [
@@ -49,9 +50,11 @@ export default function Services() {
 
   return (
     <section id="services" className="scroll-m-4 flex flex-col gap-4 w-full">
-      <h3 className="text-lg md:text-xl font-semibold tracking-tight mb-2 lg:mb-4 text-center">
-        Наши услуги:
-      </h3>
+      <Link href="/#services" className="w-fit mx-auto mb-2 lg:mb-4">
+        <h3 className="text-lg md:text-xl font-semibold tracking-tight text-center w-fit">
+          Наши услуги:
+        </h3>
+      </Link>
       <Table className="text-xs md:text-sm">
         <TableCaption className="w-full mt-8 lg:mt-12 text-xs font-normal leading-4 ">
           <Sheet>
@@ -85,7 +88,7 @@ export default function Services() {
         <TableHeader>
           <TableRow>
             <TableHead className="">Услуга</TableHead>
-            <TableHead className="text-right">Хэд-барбер</TableHead>
+            <TableHead className="text-right">Главный барбер</TableHead>
             <TableHead className="text-right">Старший барбер</TableHead>
             <TableHead className="text-right">Младший барбер</TableHead>
           </TableRow>

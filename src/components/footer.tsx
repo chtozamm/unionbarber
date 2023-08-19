@@ -20,14 +20,14 @@ export default function Footer() {
             label="Продолжить"
             image={mapPin}
             alt="На карте"
-            sizes="w-2.5 h-2.5"
+            sizes="w-3 h-3"
           />
           <a
             href="tel:+79532330099"
             className="text-zinc-500 hover:text-zinc-700 focus-visible:outline-none focus-visible:text-zinc-700 transition-colors duration-150 ease-in-out"
           >
-            <li className="flex gap-1 items-center text-zinc-500 hover:text-zinc-700 transition-colors duration-150 ease-in-out ">
-              <Phone className="w-2.5 h-2.5" fill="#8d8d94" strokeWidth={0} />
+            <li className="flex gap-1.5 items-center text-zinc-500 hover:text-zinc-700 transition-colors duration-150 ease-in-out">
+              <Phone className="w-3 h-3" fill="#a1a1aa" stroke="#a1a1aa" />
               +7 (953) 233-00-99
             </li>
           </a>
@@ -39,14 +39,14 @@ export default function Footer() {
             label="Продолжить"
             image={mapPin}
             alt="На карте"
-            sizes="w-2.5 h-2.5"
+            sizes="w-3 h-3"
           />
           <a
             href="tel:+79952401340"
             className="text-zinc-500 hover:text-zinc-700 focus-visible:outline-none focus-visible:text-zinc-700 transition-colors duration-150 ease-in-out"
           >
-            <li className="flex gap-1 items-center text-zinc-500 hover:text-zinc-700 transition-colors duration-150 ease-in-out focus-visible:outline-none focus-visible:text-zinc-700">
-              <Phone className="w-2.5 h-2.5" fill="#8d8d94" strokeWidth={0} />
+            <li className="flex gap-1.5 items-center text-zinc-500 hover:text-zinc-700 transition-colors duration-150 ease-in-out">
+              <Phone className="w-3 h-3" fill="#a1a1aa" stroke="#a1a1aa" />
               +7 (995) 240-13-40
             </li>
           </a>
