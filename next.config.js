@@ -1,13 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    images: {
-        remotePatterns: [
-            {
-                protocol: 'https',
-                hostname: 'static-maps.yandex.ru'
-            }
-        ]
-    }
-}
+const nextConfig = {}
 
 module.exports = nextConfig
