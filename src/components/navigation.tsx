@@ -15,7 +15,16 @@ import Link from "next/link";
 import React from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
-import { ImageIcon, Map, Users2 } from "lucide-react";
+import {
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  HomeIcon,
+  ImageIcon,
+  Map,
+  MenuIcon,
+  Users2,
+} from "lucide-react";
 
 export default function Navigation() {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -23,49 +32,67 @@ export default function Navigation() {
   return (
     <>
       <button
-        className="md:hidden p-4"
+        className="md:hidden p-4 flex justify-start items-center gap-1"
         onClick={() => setMenuOpened(!menuOpened)}
       >
-        <HamburgerMenuIcon
-          className={
+        <MenuIcon
+          className={cn(
+            "h-5 w-5",
             menuOpened
-              ? "transition duration-300 rotate-180 h-4 w-4"
-              : "transition duration-300 rotate--180 h-4 w-4"
-          }
+              ? "transition duration-300 rotate-180"
+              : "transition duration-300 rotate--180"
+          )}
         />
       </button>
       <div
         className={cn(
-          "absolute bg-white -left-full z-50 border top-0 mt-24 md:hidden w-screen aspect-video transition duration-300 ease-in-out rounded-none grid grid-cols-2 p-3",
+          "absolute bg-white -left-full z-50 border top-0 mt-24 md:hidden w-screen aspect-video transition duration-500 ease-out rounded-none grid grid-cols-2 gap-3 p-3",
           menuOpened
-            ? "animate-in fade-in-0 translate-x-full"
-            : "animate-out fade-out-0 pointer-events-none"
+            ? "fade-in-0 translate-x-full"
+            : "fade-out-0 pointer-events-none ease-in"
         )}
       >
-        <nav className="relative flex flex-col justify-center items-start">
+        <nav className="relative flex flex-col justify-start gap-3 items-start">
           <Link
             href={"/"}
-            className={navigationMenuTriggerStyle()}
+            className={cn(
+              navigationMenuTriggerStyle(),
+              "flex justify-start gap-1.5 items-center w-full"
+            )}
             onClick={() => setMenuOpened(false)}
           >
+            <ChevronRight className="h-3.5 w-3.5 mt-0.5" />
             Главная
           </Link>
           <Link
             href={"/#services"}
-            className={navigationMenuTriggerStyle()}
+            className={cn(
+              navigationMenuTriggerStyle(),
+              "flex justify-start gap-1.5 items-center w-full"
+            )}
             onClick={() => setMenuOpened(false)}
           >
+            <ChevronRight className="h-3.5 w-3.5 mt-0.5" />
             Услуги
           </Link>
           <Link
             href={"/about"}
-            className={navigationMenuTriggerStyle()}
+            className={cn(
+              navigationMenuTriggerStyle(),
+              "flex justify-start gap-1.5 items-center w-full"
+            )}
             onClick={() => setMenuOpened(false)}
           >
-            О нас
+            <ChevronRight className="h-3.5 w-3.5 mt-0.5" />О нас
           </Link>
           <Sheet>
-            <SheetTrigger className={navigationMenuTriggerStyle()}>
+            <SheetTrigger
+              className={cn(
+                navigationMenuTriggerStyle(),
+                "flex justify-start gap-1.5 items-center w-full"
+              )}
+            >
+              <ChevronRight className="h-3.5 w-3.5 mt-0.5" />
               <strong>Записаться</strong>
             </SheetTrigger>
             <SheetContent className="fixed w-full px-0 pb-0  md:max-w-2xl ">
