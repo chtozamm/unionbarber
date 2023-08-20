@@ -1,6 +1,9 @@
 import About from "@/components/about";
 import Hero from "@/components/hero";
 import Services from "@/components/services";
+import Team from "./about/team";
+import Contact from "./about/contact";
+import Album from "./about/album";
 
 export default function Home() {
   return (
@@ -8,6 +11,8 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
+      <Team />
+      <Album />
     </main>
   );
 }

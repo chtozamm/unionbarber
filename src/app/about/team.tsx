@@ -58,7 +58,7 @@ export default function Team() {
       id="team"
       className="scroll-m-4 flex flex-col gap-4 w-full sm:w-1/2"
     >
-      <Link href="/about#team" className="w-fit mx-auto mb-2 lg:mb-4">
+      <Link href="/#team" className="w-fit mx-auto mb-2 lg:mb-4">
         <h3 className="text-lg md:text-xl font-semibold tracking-tight text-center w-fit">
           Наша команда:
         </h3>

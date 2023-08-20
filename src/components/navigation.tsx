@@ -4,7 +4,6 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
@@ -14,13 +13,13 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import {
-  ChevronDown,
-  ChevronLeft,
+  Bookmark,
   ChevronRight,
   HomeIcon,
   ImageIcon,
+  Info,
+  List,
   Map,
   MenuIcon,
   Users2,
@@ -52,48 +51,56 @@ export default function Navigation() {
             : "fade-out-0 pointer-events-none ease-in"
         )}
       >
-        <nav className="relative flex flex-col justify-start gap-3 items-start">
+        <nav className="relative flex flex-col justify-center gap-3 items-start">
           <Link
             href={"/"}
             className={cn(
               navigationMenuTriggerStyle(),
-              "flex justify-start gap-1.5 items-center w-full"
+              "flex justify-between gap-1.5 items-center w-full"
             )}
             onClick={() => setMenuOpened(false)}
           >
-            <ChevronRight className="h-3.5 w-3.5 mt-0.5" />
-            Главная
+            <span className="">
+              <HomeIcon className=" h-4 w-4 mr-1.5 mb-0.5 inline-block" />
+              Главная
+            </span>
           </Link>
           <Link
             href={"/#services"}
             className={cn(
               navigationMenuTriggerStyle(),
-              "flex justify-start gap-1.5 items-center w-full"
+              "flex justify-between gap-1.5 items-center w-full"
             )}
             onClick={() => setMenuOpened(false)}
           >
-            <ChevronRight className="h-3.5 w-3.5 mt-0.5" />
-            Услуги
+            <span className="">
+              <List className=" h-4 w-4 mr-1.5 mb-0.5 inline-block" />
+              Услуги
+            </span>
           </Link>
           <Link
-            href={"/about"}
+            href={"/#team"}
             className={cn(
               navigationMenuTriggerStyle(),
-              "flex justify-start gap-1.5 items-center w-full"
+              "flex justify-between gap-1.5 items-center w-full"
             )}
             onClick={() => setMenuOpened(false)}
           >
-            <ChevronRight className="h-3.5 w-3.5 mt-0.5" />О нас
+            <span className="">
+              <Info className=" h-4 w-4 mr-1.5 mb-0.5 inline-block" />О нас
+            </span>
           </Link>
           <Sheet>
             <SheetTrigger
               className={cn(
                 navigationMenuTriggerStyle(),
-                "flex justify-start gap-1.5 items-center w-full"
+                "flex justify-between gap-1.5 items-center w-full"
               )}
             >
-              <ChevronRight className="h-3.5 w-3.5 mt-0.5" />
-              <strong>Записаться</strong>
+              <span className="">
+                <Bookmark className=" h-4 w-4 mr-1.5 mb-0.5 inline-block" />
+                <strong>Записаться</strong>
+              </span>
             </SheetTrigger>
             <SheetContent className="fixed w-full px-0 pb-0  md:max-w-2xl ">
               <iframe
@@ -126,7 +133,7 @@ export default function Navigation() {
             <NavigationMenuContent>
               <ul className="grid gap-3 p-4 w-full md:w-[400px]">
                 <Link
-                  href="/about#team"
+                  href="/#team"
                   className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                 >
                   <div className="text-sm font-medium leading-none">
@@ -138,7 +145,7 @@ export default function Navigation() {
                   </p>
                 </Link>
                 <Link
-                  href="/about#album"
+                  href="/#album"
                   className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                 >
                   <div className="text-sm font-medium leading-none">
@@ -150,7 +157,7 @@ export default function Navigation() {
                   </p>
                 </Link>
                 <Link
-                  href="/about#contact"
+                  href="/#contact"
                   className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                 >
                   <div className="text-sm font-medium leading-none">

@@ -9,7 +9,10 @@ import ExternalLink from "./external-link";
 
 export default function Footer() {
   return (
-    <footer className="grid grid-cols-2 md:grid-cols-3 justify-items-center text-zinc-500 text-xs gap-2 px-6 max-w-[1100px] mx-auto border-t py-8 lg:py-12">
+    <footer
+      id="contact"
+      className="grid grid-cols-2 md:grid-cols-3 justify-items-center text-zinc-500 text-xs gap-2 px-6 max-w-[1100px] mx-auto border-t py-8 lg:py-12"
+    >
       <section className="w-full flex flex-col justify-center items-center">
         <h4 className="font-semibold tracking-tight">Контакты:</h4>
         <ul className="mt-4 [&>*>li]:mt-1">
