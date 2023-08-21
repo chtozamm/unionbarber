@@ -80,7 +80,7 @@ export default function Team() {
                   <span className="text-sm font-medium leading-none">
                     {member.name}
                   </span>
-                  <span className="line-clamp-3 text-xs sm:text-sm leading-snug text-gray-500">
+                  <span className="line-clamp-3 text-xs font-normal leading-snug text-gray-500">
                     {member.position}
                   </span>
                 </div>

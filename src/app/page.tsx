@@ -1,9 +1,9 @@
 import About from "@/components/about";
 import Hero from "@/components/hero";
 import Services from "@/components/services";
-import Team from "./about/team";
-import Contact from "./about/contact";
-import Album from "./about/album";
+import Team from "@/components/team";
+import Album from "@/components/album";
+import Construction from "@/components/construction";
 
 export default function Home() {
   return (
@@ -11,8 +11,9 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
-      <Team />
-      <Album />
+      {/* <Construction /> */}
+      {/* <Team /> */}
+      {/* <Album /> */}
     </main>
   );
 }

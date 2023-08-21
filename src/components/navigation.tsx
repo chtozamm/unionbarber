@@ -14,12 +14,11 @@ import Link from "next/link";
 import React from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
-  Bookmark,
-  ChevronRight,
+  BookmarkPlus,
+  FileSpreadsheet,
   HomeIcon,
   ImageIcon,
   Info,
-  List,
   Map,
   MenuIcon,
   Users2,
@@ -74,12 +73,12 @@ export default function Navigation() {
             onClick={() => setMenuOpened(false)}
           >
             <span className="">
-              <List className=" h-4 w-4 mr-1.5 mb-0.5 inline-block" />
+              <FileSpreadsheet className=" h-4 w-4 mr-1.5 mb-0.5 inline-block" />
               Услуги
             </span>
           </Link>
           <Link
-            href={"/#team"}
+            href={"/about"}
             className={cn(
               navigationMenuTriggerStyle(),
               "flex justify-between gap-1.5 items-center w-full"
@@ -98,7 +97,7 @@ export default function Navigation() {
               )}
             >
               <span className="">
-                <Bookmark className=" h-4 w-4 mr-1.5 mb-0.5 inline-block" />
+                <BookmarkPlus className=" h-4 w-4 mr-1.5 mb-0.5 inline-block" />
                 <strong>Записаться</strong>
               </span>
             </SheetTrigger>
@@ -133,7 +132,7 @@ export default function Navigation() {
             <NavigationMenuContent>
               <ul className="grid gap-3 p-4 w-full md:w-[400px]">
                 <Link
-                  href="/#team"
+                  href="/about#team"
                   className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                 >
                   <div className="text-sm font-medium leading-none">
@@ -145,7 +144,7 @@ export default function Navigation() {
                   </p>
                 </Link>
                 <Link
-                  href="/#album"
+                  href="/about#album"
                   className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                 >
                   <div className="text-sm font-medium leading-none">
@@ -157,7 +156,7 @@ export default function Navigation() {
                   </p>
                 </Link>
                 <Link
-                  href="/#contact"
+                  href="/about#contact"
                   className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                 >
                   <div className="text-sm font-medium leading-none">
@@ -192,29 +191,3 @@ export default function Navigation() {
     </>
   );
 }
-
-// const ListItem = React.forwardRef<
-//   React.ElementRef<"a">,
-//   React.ComponentPropsWithoutRef<"a">
-// >(({ className, title, children, ...props }, ref) => {
-//   return (
-//     <li>
-//       <NavigationMenuLink asChild>
-//         <a
-//           ref={ref}
-//           className={cn(
-//             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-//             className
-//           )}
-//           {...props}
-//         >
-//           <div className="text-sm font-medium leading-none">{title}</div>
-//           <p className="line-clamp-2 text-sm leading-snug text-gray-500">
-//             {children}
-//           </p>
-//         </a>
-//       </NavigationMenuLink>
-//     </li>
-//   );
-// });
-// ListItem.displayName = "ListItem";

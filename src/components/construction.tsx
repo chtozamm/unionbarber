@@ -1,17 +1,23 @@
 import { ConstructionIcon, Info } from "lucide-react";
 import Link from "next/link";
 
-export default function Album() {
+export default function Construction() {
   return (
     <section
-      id="album"
+      id="about"
       className="scroll-m-4 flex flex-col gap-4 w-screen max-w-[1100px]"
     >
+      <Link href="/#about" className="w-fit mx-auto mb-2 lg:mb-4">
+        <h3 className="text-lg md:text-xl font-semibold tracking-tight text-center w-fit">
+          О нас:
+        </h3>
+      </Link>
+
       <div className="aspect-video w-full flex flex-col justify-around items-center">
         <ConstructionIcon className="inline-block h-24 w-24 lg:w-48 lg:h-48" />
         <p className="flex justify-center gap-1.5 items-center text-sm text-zinc-500">
-          <Info className="w-4 h-4" /> Раздел &quot;Наши работы&quot; в
-          разработке
+          <Info className="w-4 h-4" /> Раздел
+          {/* &quot;О нас&quot;  */} в разработке
         </p>
       </div>
     </section>
