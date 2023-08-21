@@ -15,7 +15,6 @@ import React from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
   Bookmark,
-  BookmarkPlus,
   FileSpreadsheet,
   HomeIcon,
   ImageIcon,
@@ -46,7 +45,7 @@ export default function Navigation() {
       </button>
       <div
         className={cn(
-          "absolute bg-white -left-full z-50 border top-0 mt-24 sm:hidden w-screen aspect-video transition duration-500 ease-out border-none rounded-none grid grid-cols-2 gap-3 p-3 pl-6",
+          "absolute bg-white -left-full z-50 border top-0 mt-24 sm:hidden w-screen aspect-video transition duration-500 ease-out border-none rounded-none grid grid-cols-[.75fr_1fr] gap-3 p-3 pl-6",
           menuOpened
             ? "fade-in-0 translate-x-full"
             : "fade-out-0 pointer-events-none ease-in"
@@ -117,20 +116,18 @@ export default function Navigation() {
         <Link
           href="/gallery"
           onClick={() => setMenuOpened(false)}
-          className="flex justify-center"
+          className="flex justify-center rounded-md w-full relative overflow-hidden items-end aspect-square"
         >
-          <div className="rounded-md bg-zinc-100 aspect-square relative flex justify-center overflow-hidden items-end">
-            <Image
-              src="/gallery.jpg"
-              fill
-              alt="Галерея"
-              className="object-cover"
-            />
-            <span className="absolute text-white text-xs py-3 mr-1 bg-[rgba(0,0,0,40%)] w-full text-center">
-              <ImageIcon className="w-3 h-3 mr-1 mb-0.5 inline-block" />
-              Галерея
-            </span>
-          </div>
+          <Image
+            src="/gallery.jpg"
+            fill
+            alt="Галерея"
+            className="object-cover"
+          />
+          <span className="absolute text-white text-xs py-3 mr-1 bg-[rgba(0,0,0,40%)] w-full text-center">
+            <ImageIcon className="w-3 h-3 mr-1 mb-0.5 inline-block" />
+            Галерея
+          </span>
         </Link>
       </div>
 
