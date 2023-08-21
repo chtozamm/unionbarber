@@ -23,6 +23,7 @@ import {
   MenuIcon,
   Users2,
 } from "lucide-react";
+import Image from "next/image";
 
 export default function Navigation() {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -112,7 +113,20 @@ export default function Navigation() {
             </SheetContent>
           </Sheet>
         </nav>
-        <div className="rounded-md bg-zinc-100 p-8 h-full"></div>
+        <Link href="/gallery" onClick={() => setMenuOpened(false)}>
+          <div className="rounded-md bg-zinc-100 h-full relative flex justify-center overflow-hidden items-end">
+            <Image
+              src="/album/barbershop.jpg"
+              fill
+              alt="Галерея"
+              className="saturate-0"
+            />
+            <span className="absolute text-white text-xs py-3 mr-1 bg-[rgba(0,0,0,20%)] w-full text-center">
+              <ImageIcon className="w-3 h-3 mr-1 mb-0.5 inline-block" />
+              Галерея
+            </span>
+          </div>
+        </Link>
       </div>
 
       <NavigationMenu>
