@@ -124,7 +124,7 @@ export default function Navigation() {
               src="/gallery.jpg"
               fill
               alt="Галерея"
-              className="saturate-0 object-cover brightness-125"
+              className="object-cover"
             />
             <span className="absolute text-white text-xs py-3 mr-1 bg-[rgba(0,0,0,40%)] w-full text-center">
               <ImageIcon className="w-3 h-3 mr-1 mb-0.5 inline-block" />
