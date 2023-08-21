@@ -14,6 +14,7 @@ import Link from "next/link";
 import React from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
+  Bookmark,
   BookmarkPlus,
   FileSpreadsheet,
   HomeIcon,
@@ -31,7 +32,7 @@ export default function Navigation() {
   return (
     <>
       <button
-        className="md:hidden p-4 flex justify-start items-center gap-1"
+        className="sm:hidden p-4 flex justify-start items-center gap-1"
         onClick={() => setMenuOpened(!menuOpened)}
       >
         <MenuIcon
@@ -45,23 +46,23 @@ export default function Navigation() {
       </button>
       <div
         className={cn(
-          "absolute bg-white -left-full z-50 border top-0 mt-24 md:hidden w-screen aspect-video transition duration-500 ease-out rounded-none grid grid-cols-2 gap-3 p-3",
+          "absolute bg-white -left-full z-50 border top-0 mt-24 sm:hidden w-screen aspect-video transition duration-500 ease-out border-none rounded-none grid grid-cols-2 gap-3 p-3 pl-6",
           menuOpened
             ? "fade-in-0 translate-x-full"
             : "fade-out-0 pointer-events-none ease-in"
         )}
       >
-        <nav className="relative flex flex-col justify-center gap-3 items-start">
+        <nav className="relative flex flex-col justify-start gap-3 items-start">
           <Link
             href={"/"}
             className={cn(
               navigationMenuTriggerStyle(),
-              "flex justify-between gap-1.5 items-center w-full"
+              "flex justify-start gap-1.5 items-center w-full text-sm border-b rounded-none text-zinc-900 p-0 hover:bg-white"
             )}
             onClick={() => setMenuOpened(false)}
           >
-            <span className="">
-              <HomeIcon className=" h-4 w-4 mr-1.5 mb-0.5 inline-block" />
+            <span>
+              <HomeIcon className="h-4 w-4 mr-1.5 mb-0.5 inline-block" />
               Главная
             </span>
           </Link>
@@ -69,12 +70,12 @@ export default function Navigation() {
             href={"/#services"}
             className={cn(
               navigationMenuTriggerStyle(),
-              "flex justify-between gap-1.5 items-center w-full"
+              "flex justify-start gap-1.5 items-center w-full text-sm border-b rounded-none text-zinc-900 p-0 hover:bg-white"
             )}
             onClick={() => setMenuOpened(false)}
           >
-            <span className="">
-              <FileSpreadsheet className=" h-4 w-4 mr-1.5 mb-0.5 inline-block" />
+            <span>
+              <FileSpreadsheet className="h-4 w-4 mr-1.5 mb-0.5 inline-block" />
               Услуги
             </span>
           </Link>
@@ -82,24 +83,24 @@ export default function Navigation() {
             href={"/about"}
             className={cn(
               navigationMenuTriggerStyle(),
-              "flex justify-between gap-1.5 items-center w-full"
+              "flex justify-start gap-1.5 items-center w-full text-sm border-b rounded-none text-zinc-900 p-0 hover:bg-white"
             )}
             onClick={() => setMenuOpened(false)}
           >
-            <span className="">
-              <Info className=" h-4 w-4 mr-1.5 mb-0.5 inline-block" />О нас
+            <span>
+              <Info className="h-4 w-4 mr-1.5 mb-0.5 inline-block" />О нас
             </span>
           </Link>
           <Sheet>
             <SheetTrigger
               className={cn(
                 navigationMenuTriggerStyle(),
-                "flex justify-between gap-1.5 items-center w-full"
+                "flex justify-start gap-1.5 items-center w-full text-sm border-b rounded-none text-zinc-900 p-0 hover:bg-white"
               )}
             >
-              <span className="">
-                <BookmarkPlus className=" h-4 w-4 mr-1.5 mb-0.5 inline-block" />
-                <strong>Записаться</strong>
+              <span>
+                <Bookmark className="h-4 w-4 mr-1.5 mb-0.5 inline-block" />
+                Записаться
               </span>
             </SheetTrigger>
             <SheetContent className="fixed w-full px-0 pb-0  md:max-w-2xl ">
@@ -113,15 +114,19 @@ export default function Navigation() {
             </SheetContent>
           </Sheet>
         </nav>
-        <Link href="/gallery" onClick={() => setMenuOpened(false)}>
-          <div className="rounded-md bg-zinc-100 h-full relative flex justify-center overflow-hidden items-end">
+        <Link
+          href="/gallery"
+          onClick={() => setMenuOpened(false)}
+          className="flex justify-center"
+        >
+          <div className="rounded-md bg-zinc-100 aspect-square relative flex justify-center overflow-hidden items-end">
             <Image
-              src="/album/barbershop.jpg"
+              src="/gallery.jpg"
               fill
               alt="Галерея"
-              className="saturate-0"
+              className="saturate-0 object-cover brightness-125"
             />
-            <span className="absolute text-white text-xs py-3 mr-1 bg-[rgba(0,0,0,20%)] w-full text-center">
+            <span className="absolute text-white text-xs py-3 mr-1 bg-[rgba(0,0,0,40%)] w-full text-center">
               <ImageIcon className="w-3 h-3 mr-1 mb-0.5 inline-block" />
               Галерея
             </span>
@@ -130,7 +135,7 @@ export default function Navigation() {
       </div>
 
       <NavigationMenu>
-        <NavigationMenuList className="hidden md:flex md:flex-row">
+        <NavigationMenuList className="hidden sm:flex sm:flex-row">
           <NavigationMenuItem>
             <Link href={"/"} className={navigationMenuTriggerStyle()}>
               Главная

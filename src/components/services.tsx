@@ -49,7 +49,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="scroll-m-4 flex flex-col gap-4 w-full">
+    <section id="services" className="scroll-m-6 flex flex-col gap-4 w-full">
       <Link href="/#services" className="w-fit mx-auto mb-2 lg:mb-4">
         <h3 className="text-lg md:text-xl font-semibold tracking-tight text-center w-fit">
           Наши услуги:
