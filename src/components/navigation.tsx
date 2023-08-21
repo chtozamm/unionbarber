@@ -132,7 +132,7 @@ export default function Navigation() {
             <NavigationMenuContent>
               <ul className="grid gap-3 p-4 w-full md:w-[400px]">
                 <Link
-                  href="/about#team"
+                  href="/about"
                   className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                 >
                   <div className="text-sm font-medium leading-none">
@@ -144,7 +144,7 @@ export default function Navigation() {
                   </p>
                 </Link>
                 <Link
-                  href="/about#album"
+                  href="/about"
                   className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                 >
                   <div className="text-sm font-medium leading-none">
@@ -156,7 +156,7 @@ export default function Navigation() {
                   </p>
                 </Link>
                 <Link
-                  href="/about#contact"
+                  href="/about"
                   className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                 >
                   <div className="text-sm font-medium leading-none">
