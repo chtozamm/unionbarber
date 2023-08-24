@@ -29,9 +29,9 @@ export default function Album() {
   return (
     <section
       id="album"
-      className="scroll-m-4 flex flex-col gap-4 w-screen max-w-[1100px] mb-4"
+      className="scroll-m-4 flex flex-col w-screen max-w-[1100px] md:px-6 mb-4"
     >
-      <div className="grid grid-cols-2 gap-y-1 gap-x-1 xs:grid-cols-2 lg:grid-cols-3 md:grid-cols-3">
+      <div className="grid grid-cols-2 gap-y-1 gap-x-1 md:gap-y-3 md:gap-x-3 xs:grid-cols-2 lg:grid-cols-3 md:grid-cols-3">
         {pictures.map((picture) => (
           <Picture key={picture.src} picture={picture} />
         ))}
@@ -44,7 +44,7 @@ export function Picture({ picture }: { picture: Picture }) {
   const [isLoading, setLoading] = useState(true);
   return (
     <div>
-      <div className="relative aspect-square overflow-hidden bg-gray-200 saturate-0">
+      <div className="relative aspect-square overflow-hidden bg-gray-200 saturate-0 md:rounded-xl">
         <Image
           alt={picture.title}
           src={picture.src}
