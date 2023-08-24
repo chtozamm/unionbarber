@@ -6,6 +6,7 @@ import logotype from "../../public/logotype.svg";
 import Image from "next/image";
 import mapPin from "../../public/pin-icon.svg";
 import ExternalLink from "./external-link";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -90,9 +91,11 @@ export default function Footer() {
         </ul>
       </section>
       <section className="flex mt-8 md:mt-0 col-span-2 md:col-span-1 flex-col gap-2 justify-center items-center w-full">
-        <div className="relative h-16 w-16">
-          <Image src={logotype} alt="логотип" fill sizes="64px" />
-        </div>
+        <Link href="/">
+          <div className="relative h-16 w-16">
+            <Image src={logotype} alt="логотип" fill sizes="64px" />
+          </div>
+        </Link>
         <span className="">© Union Barbershop 2023</span>
       </section>
     </footer>

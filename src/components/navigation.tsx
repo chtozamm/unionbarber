@@ -45,7 +45,7 @@ export default function Navigation() {
       </button>
       <div
         className={cn(
-          "absolute bg-white -left-full z-50 border top-0 mt-24 sm:hidden w-screen aspect-video transition duration-500 ease-out  rounded-none grid grid-cols-[1fr_1fr] gap-6 p-3 px-6 items-center",
+          "absolute bg-white -left-full z-50 border top-0 mt-24 sm:hidden w-screen aspect-video transition duration-500 ease-out  rounded-none grid grid-cols-[1fr_1fr] gap-6 px-6 items-center",
           menuOpened
             ? "fade-in-0 translate-x-full"
             : "fade-out-0 pointer-events-none ease-in"
@@ -60,10 +60,7 @@ export default function Navigation() {
             )}
             onClick={() => setMenuOpened(false)}
           >
-            <span>
-              {/* <HomeIcon className="h-4 w-4 mr-1.5 mb-0.5 inline-block" /> */}
-              Главная
-            </span>
+            <span>Главная</span>
           </Link>
           <Link
             href={"/#services"}
@@ -73,10 +70,7 @@ export default function Navigation() {
             )}
             onClick={() => setMenuOpened(false)}
           >
-            <span>
-              {/* <FileSpreadsheet className="h-4 w-4 mr-1.5 mb-0.5 inline-block" /> */}
-              Услуги
-            </span>
+            <span>Услуги</span>
           </Link>
           <Link
             href={"/about"}
@@ -86,10 +80,7 @@ export default function Navigation() {
             )}
             onClick={() => setMenuOpened(false)}
           >
-            <span>
-              {/* <Info className="h-4 w-4 mr-1.5 mb-0.5 inline-block" /> */}О
-              нас
-            </span>
+            <span>О нас</span>
           </Link>
           <Sheet>
             <SheetTrigger
@@ -98,10 +89,7 @@ export default function Navigation() {
                 "flex justify-start gap-1.5 items-center w-full text-xs border-b rounded-none text-zinc-900 p-0 hover:bg-white"
               )}
             >
-              <span>
-                {/* <Bookmark className="h-4 w-4 mr-1.5 mb-0.5 inline-block" /> */}
-                Записаться
-              </span>
+              <span>Записаться</span>
             </SheetTrigger>
             <SheetContent className="fixed w-full px-0 pb-0  md:max-w-2xl ">
               <iframe
@@ -149,7 +137,7 @@ export default function Navigation() {
             <NavigationMenuContent>
               <ul className="grid gap-3 p-4 w-full md:w-[400px]">
                 <Link
-                  href="/about"
+                  href="/about#team"
                   className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                 >
                   <div className="text-sm font-medium leading-none">
@@ -173,7 +161,7 @@ export default function Navigation() {
                   </p>
                 </Link>
                 <Link
-                  href="/about"
+                  href="/about#contact"
                   className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                 >
                   <div className="text-sm font-medium leading-none">

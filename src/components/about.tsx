@@ -1,11 +1,13 @@
 import Image from "next/image";
+import Team from "./team";
+import { Balancer } from "react-wrap-balancer";
 
 export default function About() {
   return (
-    <section className="w-screen md:w-full aspect-video">
+    <section className="w-screen md:w-full">
       <div className="sm:grid sm:grid-cols-2 sm:gap-3">
-        <div className="select-none aspect-video relative sm:rounded-3xl sm:col-start-2 sm:col-end-2 sm:row-start-2 overflow-hidden">
-          <Image
+        {/* <div className="select-none aspect-video relative sm:rounded-3xl sm:col-start-2 sm:col-end-2 sm:row-start-2 overflow-hidden bg-zinc-100"> */}
+        {/* <Image
             src="/photos/0ndkjhyuieTksA.jpg"
             fill={true}
             className="pointer-events-none object-cover"
@@ -14,18 +16,21 @@ export default function About() {
             }
             alt="Барберы Union Barbershop в процессе работы"
             priority
-          />
-        </div>
-        <div className="flex flex-col gap-6 text-sm mt-6 px-3 sm:col-start-1 sm:col-end-1 sm:row-span-1">
-          <h3 className="text-lg md:text-3xl font-semibold tracking-tight text-center">
+          /> */}
+        {/* </div> */}
+        <div className="flex flex-col gap-6 text-sm px-6 sm:col-start-1 sm:col-end-1 sm:row-span-1">
+          <h3 className="text-xl md:text-2xl font-semibold tracking-tight">
             О нас:
           </h3>
-          <p>Делаем мужские и детские стрижки, стрижем бороды, бреем лица.</p>
-          <p>
+          <Balancer className="inline-block">
+            Делаем мужские и детские стрижки, стрижем бороды, бреем лица.
+          </Balancer>
+          <Balancer className="inline-block">
             Наши гости получают элегантный стиль, рекомендации по укладке и
             уходу за волосами, бесплатные напитки и хорошее настроение.
-          </p>
+          </Balancer>
         </div>
+        <Team />
       </div>
     </section>
   );
