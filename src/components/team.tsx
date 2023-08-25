@@ -1,7 +1,4 @@
-import Link from "next/link";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import Image from "next/image";
 
 const team = [
   {
@@ -54,11 +51,9 @@ export default function Team() {
       id="team"
       className="scroll-m-4 flex flex-col gap-4 w-full mt-6 px-6"
     >
-      <Link href="/about#team" className="mb-2 lg:mb-4">
-        <h3 className="text-lg md:text-xl font-semibold tracking-tight">
-          Наша команда:
-        </h3>
-      </Link>
+      <h3 className="mb-2 lg:mb-4 text-lg md:text-xl font-semibold tracking-tight">
+        Наша команда:
+      </h3>
       {team.map((member) => (
         <div key={member.name} className="flex gap-3 group w-full">
           <Avatar>
