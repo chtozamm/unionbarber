@@ -1,4 +1,4 @@
-import { ImageIcon, Map, Users2 } from "lucide-react";
+import { ChevronRight, ImageIcon, Map, Users2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,9 +15,12 @@ export default function Filler() {
               <div className="mb-2 mt-4 text-md sm:text-lg font-medium leading-5">
                 Барбершоп Юнион
               </div>
-              <p className="text-xs sm:text-sm leading-tight text-muted-foreground">
-                Классический барбершоп в Пскове.
-              </p>
+              <div className="flex justify-between items-center">
+                <p className="text-xs sm:text-sm leading-tight text-muted-foreground">
+                  Классический барбершоп в Пскове.
+                </p>
+                <ChevronRight className="w-8 h-8 xs:w-6 xs:h-6 sm:w-4 sm:h-4 text-zinc-400" />
+              </div>
             </div>
           </Link>
         </li>
@@ -47,7 +50,7 @@ export default function Filler() {
             </p>
           </Link>
           <Link
-            href="/about#contact"
+            href="/#contact"
             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
           >
             <div className="text-sm font-medium leading-none">

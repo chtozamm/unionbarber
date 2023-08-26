@@ -50,11 +50,9 @@ export default function Services() {
 
   return (
     <section id="services" className="scroll-m-6 flex flex-col gap-4 w-full">
-      <Link href="/#services" className="w-fit mx-auto mb-2 lg:mb-4">
-        <h3 className="text-lg md:text-xl font-semibold tracking-tight text-center w-fit">
-          Наши услуги:
-        </h3>
-      </Link>
+      <h3 className="text-lg md:text-xl w-fit mx-auto mb-2 lg:mb-4 font-semibold tracking-tight text-center">
+        Наши услуги:
+      </h3>
       <Table className="text-xs md:text-sm">
         <TableCaption className="w-full mt-8 lg:mt-12 text-xs font-normal leading-4 ">
           <Sheet>

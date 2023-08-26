@@ -16,7 +16,7 @@ export default function Hero() {
           priority
         />
         <div className="absolute px-2 mt-2 lg:mt-8 text-center flex flex-col justify-center items-center gap-4 sm:gap-6 lg:gap-8 text-white top-[50%] translate-x-[-50%] translate-y-[-50%] left-[50%] right-[50%] w-full">
-          <p className="text-sm leading-tight sm:text-base lg:text-lg sm:leading-5 lg:leading-7">
+          <p className="text-sm leading-5 sm:text-base lg:text-lg sm:leading-5 lg:leading-7">
             <Balancer>
               Ценим <strong>традиции</strong>, превозносим{" "}
               <strong>качество</strong>, соблюдаем <strong>стиль</strong>.<br />
