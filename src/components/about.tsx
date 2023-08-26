@@ -8,14 +8,14 @@ export default function About() {
         <div className="select-none aspect-video relative overflow-hidden sm:col-start-2 md:rounded-3xl">
           <Image src="/logotype.svg" fill className="lg:p-12" alt="" />
         </div>
-        <div className="flex flex-col justify-center sm:mt-3 text-sm px-6 sm:col-start-1 sm:row-start-1">
-          <h3 className="text-xl md:text-2xl font-semibold tracking-tight">
+        <div className="flex flex-col justify-center text-sm px-6 sm:col-start-1 sm:row-start-1">
+          <h3 className="text-xl md:text-3xl font-semibold tracking-tight">
             О нас:
           </h3>
-          <p className="leading-5 [&:not(:first-child)]:mt-6">
+          <p className="leading-5 mt-6 sm:mt-6">
             Делаем мужские и детские стрижки, стрижем бороды, бреем лица.
           </p>
-          <p className="leading-5 [&:not(:first-child)]:mt-3">
+          <p className="leading-5 [&:not(:first-child)]:mt-6">
             Наши гости получают элегантный стиль, рекомендации по укладке и
             уходу за волосами, бесплатные напитки и хорошее настроение.
           </p>

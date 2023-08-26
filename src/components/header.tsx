@@ -18,7 +18,7 @@ export default function Header() {
               />
             </div>
           </div>
-          <h1 className="text-lg md:text-xl px-3 w-full font-bold tracking-tight leading-5 md:leading-6">
+          <h1 className="text-lg md:text-xl px-3 w-full font-bold tracking-norma leading-5 md:leading-6">
             Барбершоп
             <br />
             Юнион
