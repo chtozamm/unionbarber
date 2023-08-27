@@ -9,10 +9,10 @@ export default function About() {
           <Picture
             title="Логотип Юнион Барбершоп"
             src="/logotype.svg"
-            className="lg:p-12"
+            className=""
           />
         </div>
-        <div className="flex flex-col justify-center text-sm px-6 sm:col-start-1 sm:row-start-1">
+        <div className="flex flex-col justify-center text-sm px-6 sm:col-start-1 sm:row-start-1 max-w-[470px]">
           <h3 className="text-xl md:text-3xl font-semibold tracking-tight">
             О нас:
           </h3>
