@@ -45,41 +45,27 @@ export default function Navigation() {
         <nav className="relative flex flex-col justify-start gap-3 items-start">
           <Link
             href={"/"}
-            className={cn(
-              navigationMenuTriggerStyle(),
-              "flex justify-start gap-1.5 items-center w-full text-xs border-b rounded-none text-zinc-900 p-0 hover:bg-white"
-            )}
+            className="group h-9 bg-background px-4 py-2 font-medium flex justify-start gap-1.5 items-center w-full text-xs border-b rounded-none text-zinc-900 p-0 hover:bg-white"
             onClick={() => setMenuOpened(false)}
           >
             <span>Главная</span>
           </Link>
           <Link
             href={"/#services"}
-            className={cn(
-              navigationMenuTriggerStyle(),
-              "flex justify-start gap-1.5 items-center w-full text-xs border-b rounded-none text-zinc-900 p-0 hover:bg-white"
-            )}
+            className="group h-9 bg-background px-4 py-2 font-medium flex justify-start gap-1.5 items-center w-full text-xs border-b rounded-none text-zinc-900 p-0 hover:bg-white"
             onClick={() => setMenuOpened(false)}
           >
             <span>Услуги</span>
           </Link>
           <Link
             href={"/about"}
-            className={cn(
-              navigationMenuTriggerStyle(),
-              "flex justify-start gap-1.5 items-center w-full text-xs border-b rounded-none text-zinc-900 p-0 hover:bg-white"
-            )}
+            className="group h-9 bg-background px-4 py-2 font-medium flex justify-start gap-1.5 items-center w-full text-xs border-b rounded-none text-zinc-900 p-0 hover:bg-white"
             onClick={() => setMenuOpened(false)}
           >
             <span>О нас</span>
           </Link>
           <Sheet>
-            <SheetTrigger
-              className={cn(
-                navigationMenuTriggerStyle(),
-                "flex justify-start gap-1.5 items-center w-full text-xs border-b rounded-none text-zinc-900 p-0 hover:bg-white"
-              )}
-            >
+            <SheetTrigger className="group h-9 bg-background px-4 py-2 font-medium flex justify-start gap-1.5 items-center w-full text-xs border-b rounded-none text-zinc-900 p-0 hover:bg-white">
               <span>Записаться</span>
             </SheetTrigger>
             <SheetContent className="fixed w-full px-0 pb-0  md:max-w-2xl ">

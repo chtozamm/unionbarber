@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="select-none flex justify-between items-center w-full px-3 md:px-6 mt-4 max-w-[1100px] mx-auto">
+    <header className="relative select-none flex justify-between items-center w-full px-3 md:px-6 mt-4 max-w-[1100px] mx-auto">
       <div className="w-full">
         <Link href="/" className="flex items-center w-fit">
           <div className="col-span-1 flex justify-center">
