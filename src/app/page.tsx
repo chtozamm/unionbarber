@@ -8,9 +8,6 @@ export default function Home() {
       <Hero />
       <Filler />
       <Services />
-      {/* <Construction /> */}
-      {/* <Team /> */}
-      {/* <Album /> */}
     </main>
   );
 }

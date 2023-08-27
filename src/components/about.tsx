@@ -1,12 +1,16 @@
-import Image from "next/image";
 import Team from "./team";
+import Picture from "./picture";
 
 export default function About() {
   return (
     <section id="about" className="w-screen md:w-full sm:mb-6">
       <div className="flex flex-col gap-3 sm:grid sm:grid-cols-2">
         <div className="select-none aspect-video relative overflow-hidden sm:col-start-2 md:rounded-3xl">
-          <Image src="/logotype.svg" fill className="lg:p-12" alt="" />
+          <Picture
+            title="Логотип Юнион Барбершоп"
+            src="/logotype.svg"
+            className="lg:p-12"
+          />
         </div>
         <div className="flex flex-col justify-center text-sm px-6 sm:col-start-1 sm:row-start-1">
           <h3 className="text-xl md:text-3xl font-semibold tracking-tight">
@@ -23,14 +27,6 @@ export default function About() {
         <div className="sm:col-start-1 ">
           <Team />
         </div>
-        {/* <div className="relative aspect-[5/7] sm:px-3 w-full mx-auto max-w-[380px]">
-          <Image
-            src="/balt.jpg"
-            fill
-            alt=""
-            className="rounded-xl overflow-hidden sm:mx-6"
-          />
-        </div> */}
       </div>
     </section>
   );

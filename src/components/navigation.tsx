@@ -13,16 +13,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import {
-  Bookmark,
-  FileSpreadsheet,
-  HomeIcon,
-  ImageIcon,
-  Info,
-  Map,
-  MenuIcon,
-  Users2,
-} from "lucide-react";
+import { ImageIcon, Map, MenuIcon, Users2 } from "lucide-react";
 import Image from "next/image";
 
 export default function Navigation() {
