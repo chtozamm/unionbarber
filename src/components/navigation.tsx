@@ -22,57 +22,57 @@ export default function Navigation() {
   return (
     <>
       <button
-        className="sm:hidden p-4 flex justify-start items-center gap-1"
+        className="flex items-center justify-start gap-1 p-4 sm:hidden"
         onClick={() => setMenuOpened(!menuOpened)}
       >
         <MenuIcon
           className={cn(
             "h-5 w-5",
             menuOpened
-              ? "transition duration-300 rotate-180"
-              : "transition duration-300 rotate--180"
+              ? "rotate-180 transition duration-300"
+              : "rotate--180 transition duration-300",
           )}
         />
       </button>
       <div
         className={cn(
-          "absolute bg-white -left-full z-50 border top-0 mt-24 sm:hidden w-screen aspect-video transition duration-500 ease-out  rounded-none grid grid-cols-[1fr_1fr] gap-6 px-6 items-center",
+          "absolute -left-full top-0 z-50 mt-24 grid aspect-video w-screen grid-cols-[1fr_1fr] items-center gap-6 rounded-none border  bg-white px-6 transition duration-500 ease-out sm:hidden",
           menuOpened
-            ? "fade-in-0 translate-x-full"
-            : "fade-out-0 pointer-events-none ease-in"
+            ? "translate-x-full fade-in-0"
+            : "pointer-events-none ease-in fade-out-0",
         )}
       >
-        <nav className="relative flex flex-col justify-start gap-3 items-start">
+        <nav className="relative flex flex-col items-start justify-start gap-3">
           <Link
             href={"/"}
-            className="group h-9 bg-background px-4 py-2 font-medium flex justify-start gap-1.5 items-center w-full text-xs border-b rounded-none text-zinc-900 p-0 hover:bg-white"
+            className="bg-background group flex h-9 w-full items-center justify-start gap-1.5 rounded-none border-b p-0 px-4 py-2 text-xs font-medium text-gray-900 hover:bg-white"
             onClick={() => setMenuOpened(false)}
           >
             <span>Главная</span>
           </Link>
           <Link
             href={"/#services"}
-            className="group h-9 bg-background px-4 py-2 font-medium flex justify-start gap-1.5 items-center w-full text-xs border-b rounded-none text-zinc-900 p-0 hover:bg-white"
+            className="bg-background group flex h-9 w-full items-center justify-start gap-1.5 rounded-none border-b p-0 px-4 py-2 text-xs font-medium text-gray-900 hover:bg-white"
             onClick={() => setMenuOpened(false)}
           >
             <span>Услуги</span>
           </Link>
           <Link
             href={"/about"}
-            className="group h-9 bg-background px-4 py-2 font-medium flex justify-start gap-1.5 items-center w-full text-xs border-b rounded-none text-zinc-900 p-0 hover:bg-white"
+            className="bg-background group flex h-9 w-full items-center justify-start gap-1.5 rounded-none border-b p-0 px-4 py-2 text-xs font-medium text-gray-900 hover:bg-white"
             onClick={() => setMenuOpened(false)}
           >
             <span>О нас</span>
           </Link>
           <Sheet>
-            <SheetTrigger className="group h-9 bg-background px-4 py-2 font-medium flex justify-start gap-1.5 items-center w-full text-xs border-b rounded-none text-zinc-900 p-0 hover:bg-white">
+            <SheetTrigger className="bg-background group flex h-9 w-full items-center justify-start gap-1.5 rounded-none border-b p-0 px-4 py-2 text-xs font-medium text-gray-900 hover:bg-white">
               <span>Записаться</span>
             </SheetTrigger>
             <SheetContent className="fixed w-full px-0 pb-0  md:max-w-2xl ">
               <iframe
                 height="100%"
                 width="100%"
-                className="scale-90 rounded-3xl"
+                className="scale-90 rounded-2xl"
                 id="ms_booking_iframe"
                 src="https://w891186.yclients.com/"
               ></iframe>
@@ -82,7 +82,7 @@ export default function Navigation() {
         <Link
           href="/gallery"
           onClick={() => setMenuOpened(false)}
-          className="flex justify-center rounded-md w-full relative overflow-hidden items-end aspect-[5/6] max-h-44"
+          className="relative flex aspect-[5/6] max-h-44 w-full items-end justify-center overflow-hidden rounded-md"
         >
           <Image
             src="/gallery.jpg"
@@ -90,15 +90,15 @@ export default function Navigation() {
             alt="Галерея"
             className="object-cover"
           />
-          <span className="absolute text-white text-xs py-3 mr-1 bg-[rgba(0,0,0,40%)] w-full text-center">
-            <ImageIcon className="w-3 h-3 mr-1 mb-0.5 inline-block" />
+          <span className="absolute mr-1 w-full bg-[rgba(0,0,0,40%)] py-3 text-center text-xs text-white">
+            <ImageIcon className="mb-0.5 mr-1 inline-block h-3 w-3" />
             Галерея
           </span>
         </Link>
       </div>
 
       <NavigationMenu>
-        <NavigationMenuList className="hidden sm:flex sm:flex-row">
+        <NavigationMenuList className="hidden select-none sm:flex sm:flex-row">
           <NavigationMenuItem>
             <Link href={"/"} className={navigationMenuTriggerStyle()}>
               Главная
@@ -111,41 +111,41 @@ export default function Navigation() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger>О нас</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid gap-3 p-4 w-full md:w-[400px]">
+            <NavigationMenuContent className="select-none">
+              <ul className="grid w-full gap-3 p-4 md:w-[400px]">
                 <Link
                   href="/about"
-                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                  className="block  space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-100 focus:bg-gray-100"
                 >
                   <div className="text-sm font-medium leading-none">
-                    <Users2 className=" h-4 w-4 mr-1 mb-0.5 inline-block" />
+                    <Users2 className=" mb-0.5 mr-1 inline-block h-4 w-4" />
                     Наша команда
                   </div>
-                  <p className="line-clamp-3 text-xs sm:text-sm leading-snug text-gray-500">
+                  <p className="line-clamp-3 text-xs leading-snug text-gray-500 sm:text-sm">
                     Барберы, администраторы и все причастные
                   </p>
                 </Link>
                 <Link
                   href="/gallery"
-                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                  className="block  space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-100 focus:bg-gray-100"
                 >
                   <div className="text-sm font-medium leading-none">
-                    <ImageIcon className="w-4 h-4 mr-1 mb-0.5 inline-block" />
+                    <ImageIcon className="mb-0.5 mr-1 inline-block h-4 w-4" />
                     Наши работы
                   </div>
-                  <p className="line-clamp-3 text-xs sm:text-sm leading-snug text-gray-500">
+                  <p className="line-clamp-3 text-xs leading-snug text-gray-500 sm:text-sm">
                     Альбом с работами, выполненными нашими мастерами
                   </p>
                 </Link>
                 <Link
-                  href="#contact"
-                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                  href="/contact"
+                  className="block  space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-100 focus:bg-gray-100"
                 >
                   <div className="text-sm font-medium leading-none">
-                    <Map className="w-4 h-4 mr-1 mb-0.5 inline-block" />
+                    <Map className="mb-0.5 mr-1 inline-block h-4 w-4" />
                     Контакты
                   </div>
-                  <p className="line-clamp-3 text-xs sm:text-sm leading-snug text-gray-500">
+                  <p className="line-clamp-3 text-xs leading-snug text-gray-500 sm:text-sm">
                     Филиалы, телефон, социальные сети
                   </p>
                 </Link>
@@ -161,7 +161,7 @@ export default function Navigation() {
                 <iframe
                   height="100%"
                   width="100%"
-                  className="scale-90 rounded-3xl"
+                  className="scale-90 rounded-2xl"
                   id="ms_booking_iframe"
                   src="https://w891186.yclients.com/"
                 ></iframe>

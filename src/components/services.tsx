@@ -49,36 +49,39 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="scroll-m-6 flex flex-col gap-4 w-full">
-      <h3 className="text-lg md:text-xl w-fit mx-auto mb-2 lg:mb-4 font-semibold tracking-tight text-center">
+    <section
+      id="services"
+      className="-mb-8 flex w-full scroll-m-6 flex-col gap-4"
+    >
+      <h3 className="mx-auto mb-2 w-fit text-center text-lg font-semibold tracking-tight md:text-xl lg:mb-4">
         Наши услуги:
       </h3>
       <Table className="text-xs md:text-sm">
-        <TableCaption className="w-full mt-8 lg:mt-12 text-xs font-normal leading-4 ">
+        <TableCaption className="mt-8 w-full text-xs font-normal leading-4 lg:mt-12 ">
           <Sheet>
-            <SheetTrigger className="mx-auto text-xs flex items-center justify-center rounded-md sm:text-sm font-semibold lg:text-md transition-colors focus-visible:outline-none focus-visible:bg-zinc-100 focus-visible:text-zinc-900 disabled:pointer-events-none disabled:opacity-50 pl-3 pr-5 py-3 bg-zinc-900 text-zinc-50 shadow-sm hover:text-zinc-900 hover:bg-zinc-100 w-fit">
-              <ChevronRight className="h-4 w-4 mr-1" />
+            <SheetTrigger className="lg:text-md mx-auto flex w-fit items-center justify-center rounded-md bg-gray-900 py-3 pl-3 pr-5 text-xs font-semibold text-gray-50 shadow-sm transition-colors hover:bg-gray-700 focus-visible:bg-gray-700 focus-visible:text-gray-900 focus-visible:outline-none sm:text-sm">
+              <ChevronRight className="mr-1 h-4 w-4" />
               Записаться на стрижку
             </SheetTrigger>
             <SheetContent className="fixed w-full px-0 pb-0  md:max-w-2xl ">
               <iframe
                 height="100%"
                 width="100%"
-                className="scale-90 rounded-3xl"
+                className="scale-90 rounded-2xl"
                 id="ms_booking_iframe"
                 src="https://w891186.yclients.com/"
               ></iframe>
             </SheetContent>
           </Sheet>
-          <div className="grid grid-cols-2 my-8 lg:my-12">
+          <div className="my-8 grid grid-cols-2 lg:my-12">
             <span>
-              <RussianRuble className="mx-auto mb-0.5 w-5 h-5" />
+              <RussianRuble className="mx-auto mb-0.5 h-5 w-5" />
               <Balancer>
                 Оплата наличными или переводом по номеру телефона.
               </Balancer>
             </span>
             <span>
-              <Baby className="mx-auto mb-0.5 w-5 h-5" />
+              <Baby className="mx-auto mb-0.5 h-5 w-5" />
               <Balancer>Возрастное ограничение: 7 лет.</Balancer>
             </span>
           </div>
