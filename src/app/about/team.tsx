@@ -47,20 +47,17 @@ const team = [
 
 export default function Team() {
   return (
-    <section
-      id="team"
-      className="scroll-m-4 flex flex-col gap-4 w-full mt-6 px-6"
-    >
-      <h3 className="mb-2 lg:mb-4 text-lg md:text-xl font-semibold tracking-tight">
+    <div id="team" className="flex w-full scroll-m-4 flex-col gap-4 px-6">
+      <h3 className="mb-2 text-lg font-semibold tracking-tight md:text-xl lg:mb-4">
         Наша команда:
       </h3>
       {team.map((member) => (
-        <div key={member.name} className="flex gap-3 group w-full">
+        <div key={member.name} className="group flex w-full gap-3">
           <Avatar>
             {/* <AvatarImage src={member.image} alt={member.name} /> */}
             <AvatarFallback>{member.name[0]}</AvatarFallback>
           </Avatar>
-          <div className="text-left group-hover:text-zinc-600 duration-300 sm:pr-8">
+          <div className="text-left duration-300 group-hover:text-gray-600 sm:pr-8">
             <span className="text-sm font-medium leading-none">
               {member.name}
             </span>
@@ -70,6 +67,6 @@ export default function Team() {
           </div>
         </div>
       ))}
-    </section>
+    </div>
   );
 }

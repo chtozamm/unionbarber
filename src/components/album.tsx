@@ -30,12 +30,12 @@ export default function Album() {
   return (
     <section
       id="album"
-      className="scroll-m-4 select-none flex flex-col gap-1 md:gap-3 w-screen max-w-[1100px] md:px-6 mb-4"
+      className="mb-4 flex w-screen max-w-[1100px] select-none scroll-m-4 flex-col gap-1 md:gap-3 md:px-6"
     >
-      <div className=" aspect-video relative overflow-hidden md:rounded-3xl bg-zinc-100">
+      <div className=" relative aspect-video overflow-hidden bg-gray-100 md:rounded-2xl">
         <Image src="/photos/bw/wide-1.jpg" fill alt="" />
       </div>
-      <div className="grid grid-cols-2 gap-y-1 gap-x-1 md:gap-y-3 md:gap-x-3 xs:grid-cols-2 lg:grid-cols-3 md:grid-cols-3">
+      <div className="xs:grid-cols-2 grid grid-cols-2 gap-x-1 gap-y-1 md:grid-cols-3 md:gap-x-3 md:gap-y-3 lg:grid-cols-3">
         {pictures.map((picture) => (
           <Picture key={picture.src} picture={picture} />
         ))}

@@ -4,12 +4,12 @@ export default function Construction() {
   return (
     <section
       id="about"
-      className="scroll-m-4 flex flex-col gap-4 w-screen max-w-[1100px]"
+      className="flex w-screen max-w-[1100px] scroll-m-4 flex-col gap-4"
     >
-      <div className="aspect-video w-full flex flex-col justify-around items-center">
-        <ConstructionIcon className="inline-block h-24 w-24 lg:w-48 lg:h-48" />
-        <p className="flex justify-center gap-1.5 items-center text-sm text-zinc-500">
-          <Info className="w-4 h-4" /> Раздел
+      <div className="flex aspect-video w-full flex-col items-center justify-around">
+        <ConstructionIcon className="inline-block h-24 w-24 lg:h-48 lg:w-48" />
+        <p className="flex items-center justify-center gap-1.5 text-sm text-gray-500">
+          <Info className="h-4 w-4" /> Раздел
           {/* &quot;О нас&quot;  */} в разработке
         </p>
       </div>
