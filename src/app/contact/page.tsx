@@ -1,4 +1,6 @@
+import Picture from "@/components/picture";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "О нас | Барбершоп Юнион",
@@ -6,36 +8,63 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="flex flex-col items-center gap-6 lg:gap-3 mt-4 max-w-[1100px] mx-auto px-4 md:px-6 mb-8">
+    <main className="mx-auto mb-8 mt-4 flex max-w-[1100px] flex-col items-center gap-6 px-4 md:px-6 lg:gap-3">
       <section
         id="address"
-        className="scroll-m-4 flex flex-col gap-4 w-full mt-6 px-6"
+        className="mt-6 flex w-full scroll-m-4 flex-col gap-4 px-6"
       >
-        <h3 className="mb-2 lg:mb-4 text-lg md:text-xl font-semibold tracking-tight">
+        <h3 className="mb-2 text-lg font-semibold tracking-tight md:text-xl lg:mb-4">
           Адреса:
         </h3>
-        <div className="flex flex-col lg:flex-row">
-          <div className="flex gap-3 group w-full">
-            <div className="text-left group-hover:text-zinc-600 duration-300 sm:pr-8">
-              <div className="w-full aspect-square bg-zinc-100 rounded-md"></div>
-              <span className="text-sm font-medium leading-none">
+        <div className="flex flex-col gap-8 lg:flex-row">
+          <div className="flex w-full gap-3">
+            <div className="w-full text-left duration-300">
+              <h3 className="text-md mb-3 w-full font-medium leading-none">
                 Кузнецкая улица, 17/2
-              </span>
-              <span className="line-clamp-3 text-xs font-normal leading-snug text-gray-500">
-                +7 (953) 233-00-99
-              </span>
+              </h3>
+              <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-t-md bg-zinc-100">
+                Барбершоп
+                {/* <Image
+                  className="object-cover"
+                  fill
+                  alt="Барбершоп на Балтийской"
+                  src={"/balt.jpg"}
+                /> */}
+              </div>
+              <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-b-md bg-zinc-100">
+                {/* Яндекс.Карты */}
+                <Image
+                  className="object-cover"
+                  fill
+                  alt="Кузнецкая на карте"
+                  src={"/kuz-map.jpg"}
+                />
+              </div>
             </div>
           </div>
-          <div className="flex gap-3 group w-full">
-            <div className="text-left group-hover:text-zinc-600 duration-300 sm:pr-8">
-              <div className="w-full aspect-square bg-zinc-100 rounded-md"></div>
-
-              <span className="text-sm font-medium leading-none">
+          <div className="flex w-full gap-3">
+            <div className="w-full text-left duration-300">
+              <h3 className="text-md mb-3 w-full font-medium leading-none">
                 Балтийская улица, 14Б
-              </span>
-              <span className="line-clamp-3 text-xs font-normal leading-snug text-gray-500">
-                +7 (995) 240-13-40
-              </span>
+              </h3>
+              <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-t-md bg-zinc-100">
+                Барбершоп
+                {/* <Image
+                  className="object-cover"
+                  fill
+                  alt="Барбершоп на Балтийской"
+                  src={"/balt.jpg"}
+                /> */}
+              </div>
+              <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-b-md bg-zinc-100">
+                {/* Яндекс.Карты */}
+                <Image
+                  className="object-cover"
+                  fill
+                  alt="Балтийская на карте"
+                  src={"/balt-map.jpg"}
+                />
+              </div>
             </div>
           </div>
         </div>
