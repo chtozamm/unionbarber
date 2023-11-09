@@ -16,7 +16,7 @@ export default function Footer() {
     >
       <section className="w-full flex flex-col justify-center items-center">
         <h4 className="font-semibold tracking-tight">Контакты:</h4>
-        <ul className="mt-4 [&>*>li]:mt-1">
+        <ul className="mt-4 flex flex-col gap-1.5">
           <ExternalLink
             url="https://yandex.ru/maps/-/CDqVI~q"
             address="Кузнецкая улица, 17/2"
@@ -28,14 +28,13 @@ export default function Footer() {
           />
           <a
             href="tel:+79532330099"
-            className="text-zinc-500 hover:text-zinc-700 focus-visible:outline-none focus-visible:text-zinc-700 transition-colors duration-150 ease-in-out"
+            className="mb-3 text-zinc-500 group focus-visible:outline-none focus-within:text-zinc-700 transition-colors duration-150 ease-in-out"
           >
-            <li className="flex gap-1.5 items-center text-zinc-500 hover:text-zinc-700 transition-colors duration-150 ease-in-out">
+            <span className="flex gap-1.5 items-center text-zinc-500 group-hover:text-zinc-700 group-focus:text-zinc-700">
               <Phone className="w-3 h-3" fill="#a1a1aa" stroke="#a1a1aa" />
               +7 (953) 233-00-99
-            </li>
+            </span>
           </a>
-          <br />
           <ExternalLink
             url="https://yandex.ru/maps/-/CDqVUnD"
             address="Балтийская улица, 14Б"
@@ -47,18 +46,18 @@ export default function Footer() {
           />
           <a
             href="tel:+79952401340"
-            className="text-zinc-500 hover:text-zinc-700 focus-visible:outline-none focus-visible:text-zinc-700 transition-colors duration-150 ease-in-out"
+            className="text-zinc-500 group focus-visible:outline-none focus-within:text-zinc-700 transition-colors duration-150 ease-in-out"
           >
-            <li className="flex gap-1.5 items-center text-zinc-500 hover:text-zinc-700 transition-colors duration-150 ease-in-out">
+            <span className="flex gap-1.5 items-center text-zinc-500 group-hover:text-zinc-700 group-focus:text-zinc-700">
               <Phone className="w-3 h-3" fill="#a1a1aa" stroke="#a1a1aa" />
               +7 (995) 240-13-40
-            </li>
+            </span>
           </a>
         </ul>
       </section>
       <section className="w-full flex flex-col items-center">
         <h4 className="font-semibold tracking-tight">Социальные сети:</h4>
-        <ul className="mt-4 [&>*>li]:mt-1">
+        <ul className="mt-4 flex flex-col gap-1.5">
           <ExternalLink
             url="https://vk.com/union_barbershop"
             address="VK"
@@ -68,7 +67,6 @@ export default function Footer() {
             alt="VK"
             sizes="h-4 w-4"
           />
-          <br />
           <ExternalLink
             url="https://t.me/unionbarber"
             address="Telegram"
@@ -78,7 +76,6 @@ export default function Footer() {
             alt="Telegram"
             sizes="w-4 h-4"
           />
-          <br />
           <ExternalLink
             url="https://wa.me/79532330099"
             address="WhatsApp"
@@ -92,7 +89,7 @@ export default function Footer() {
       </section>
       <section className="flex mt-8 md:mt-0 col-span-2 md:col-span-1 flex-col gap-2 justify-center items-center w-full">
         <Link href="/">
-          <div className="relative h-16 w-16">
+          <div className="relative h-16 w-16 select-none">
             <Image src={logotype} alt="логотип" fill sizes="64px" />
           </div>
         </Link>

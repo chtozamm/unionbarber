@@ -32,11 +32,9 @@ export default function ExternalLink({
 }) {
   return (
     <AlertDialog>
-      <AlertDialogTrigger className="text-zinc-500 hover:text-zinc-700 text-left focus-visible:outline-none focus-visible:text-zinc-700 transition-colors duration-150 ease-in-out">
-        <li className="flex gap-1.5 items-center">
-          <Image src={image} alt={alt} className={sizes} />
-          {address}
-        </li>
+      <AlertDialogTrigger className="flex gap-1.5 items-center select-text text-zinc-500 hover:text-zinc-700 text-left focus-visible:outline-none focus-visible:text-zinc-700 transition-colors duration-150 ease-in-out">
+        <Image src={image} alt={alt} className={`${sizes} select-none`} />
+        {address}
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>

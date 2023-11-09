@@ -4,11 +4,11 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="relative select-none flex justify-between items-center w-full px-3 md:px-6 mt-4 max-w-[1100px] mx-auto">
+    <header className="relative  flex justify-between items-center w-full px-3 md:px-6 mt-4 max-w-[1100px] mx-auto">
       <div className="w-full">
         <Link href="/" className="flex items-center w-fit">
           <div className="col-span-1 flex justify-center">
-            <div className="relative block w-20 h-20 md:w-24 md:h-24">
+            <div className="relative block w-20 h-20 md:w-24 md:h-24 select-none">
               <Image
                 src="/logotype.svg"
                 fill={true}
@@ -23,7 +23,7 @@ export default function Header() {
             <br />
             Юнион
             <br />
-            <span className="font-normal text-xs md:text-sm text-muted-foreground">
+            <span className="font-normal text-xs md:text-sm text-zinc-500">
               Псков
             </span>
           </h1>

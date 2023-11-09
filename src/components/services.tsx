@@ -56,7 +56,7 @@ export default function Services() {
       <Table className="text-xs md:text-sm">
         <TableCaption className="w-full mt-8 lg:mt-12 text-xs font-normal leading-4 ">
           <Sheet>
-            <SheetTrigger className="mx-auto text-xs flex items-center justify-center rounded-md sm:text-sm font-semibold lg:text-md transition-colors focus-visible:outline-none focus-visible:bg-zinc-100 focus-visible:text-zinc-900 disabled:pointer-events-none disabled:opacity-50 pl-3 pr-5 py-3 bg-zinc-900 text-zinc-50 shadow-sm hover:text-zinc-900 hover:bg-zinc-100 w-fit">
+            <SheetTrigger className="mx-auto text-xs flex items-center justify-center rounded-md sm:text-sm font-semibold lg:text-md transition-colors focus-visible:outline-none focus-visible:bg-zinc-700 focus-visible:text-zinc-900 pl-3 pr-5 py-3 bg-zinc-900 text-zinc-50 shadow-sm hover:bg-zinc-700 w-fit">
               <ChevronRight className="h-4 w-4 mr-1" />
               Записаться на стрижку
             </SheetTrigger>

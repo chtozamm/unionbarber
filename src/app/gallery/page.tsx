@@ -1,6 +1,9 @@
-import Construction from "@/components/construction";
 import Album from "@/components/album";
-import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Галерея | Барбершоп Юнион",
+};
 
 export default function AboutPage() {
   return (

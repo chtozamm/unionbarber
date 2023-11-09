@@ -6,11 +6,11 @@ import Balancer from "react-wrap-balancer";
 export default function Hero() {
   return (
     <section id="home" className="w-screen md:w-full">
-      <div className="select-none aspect-video relative overflow-hidden md:rounded-3xl">
+      <div className=" aspect-video relative overflow-hidden md:rounded-3xl">
         <Image
           src="/hero.jpg"
           fill={true}
-          className="brightness-50 pointer-events-none"
+          className="brightness-50 pointer-events-none select-none"
           sizes={"(max-width: 375px) 375px, (max-width: 640px): 640px, 1100px"}
           alt="Барбер делает стрижку клиенту в фирменной футболке Union Barbershop"
           priority
@@ -25,7 +25,7 @@ export default function Hero() {
             </Balancer>
           </p>
           <Sheet>
-            <SheetTrigger className="text-xs inline-flex items-center justify-center rounded-md sm:text-sm font-semibold lg:text-md transition-colors focus-visible:outline-none focus-visible:border-zinc-300 focus-visible:text-zinc-300 disabled:pointer-events-none disabled:opacity-50 pl-2 pr-4 py-2 lg:py-3 lg:pl-3 lg:pr-5 bg-transparent border border-zinc-50 text-zinc-50 shadow-sm hover:border-zinc-300  hover:text-zinc-300 w-fit">
+            <SheetTrigger className="text-xs inline-flex items-center justify-center rounded-md sm:text-sm font-semibold lg:text-md transition-colors focus-visible:outline-none focus-visible:border-zinc-300 focus-visible:text-zinc-300 pl-2 pr-4 py-2 lg:py-3 lg:pl-3 lg:pr-5 bg-transparent border border-zinc-50 text-zinc-50 shadow-sm hover:border-zinc-300  hover:text-zinc-300 w-fit">
               <ChevronRight className="h-4 w-4 mr-1" />
               Записаться на стрижку
             </SheetTrigger>

@@ -7,16 +7,16 @@ export default function Filler() {
     <section className="w-full">
       <ul className="grid gap-3 grid-cols-[.75fr_1fr] sm:grid-cols-2">
         <li className="w-full block">
-          <Link href="/about">
-            <div className="flex h-full w-full select-none flex-col justify-end rounded-md md:rounded-3xl bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
-              <div className="h-20 w-20 relative">
+          <Link href="/about" className="">
+            <div className="flex h-full w-full flex-col justify-end rounded-md md:rounded-3xl bg-gradient-to-b from-zinc-50 to-zinc-100 p-6">
+              <div className="h-20 w-20 relative select-none">
                 <Image src={"logotype.svg"} alt="логотип" sizes="80px" fill />
               </div>
               <div className="mb-2 mt-4 text-md sm:text-lg font-medium leading-5">
                 Барбершоп Юнион
               </div>
               <div className="flex justify-between items-center">
-                <p className="text-xs sm:text-sm leading-tight text-muted-foreground">
+                <p className="text-xs sm:text-sm leading-tight text-zinc-500">
                   Классический барбершоп в Пскове.
                 </p>
                 <ChevronRight className="w-8 h-8 xs:w-6 xs:h-6 sm:w-4 sm:h-4 text-zinc-400" />
@@ -27,7 +27,7 @@ export default function Filler() {
         <li>
           <Link
             href="/about"
-            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+            className="block space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gradient-to-r hover:from-zinc-50 hover:to-zinc-100 focus:bg-zinc-50"
           >
             <div className="text-sm font-medium leading-none">
               <Users2 className=" h-4 w-4 mr-1 mb-0.5 inline-block" />
@@ -39,7 +39,7 @@ export default function Filler() {
           </Link>
           <Link
             href="/gallery"
-            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+            className="block space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gradient-to-r hover:from-zinc-50 hover:to-zinc-100 focus:bg-zinc-50"
           >
             <div className="text-sm font-medium leading-none">
               <ImageIcon className="w-4 h-4 mr-1 mb-0.5 inline-block" />
@@ -51,7 +51,7 @@ export default function Filler() {
           </Link>
           <Link
             href="/#contact"
-            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+            className="block space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gradient-to-r hover:from-zinc-50 hover:to-zinc-100 focus:bg-zinc-50"
           >
             <div className="text-sm font-medium leading-none">
               <Map className="w-4 h-4 mr-1 mb-0.5 inline-block" />

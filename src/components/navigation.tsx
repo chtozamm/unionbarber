@@ -98,7 +98,7 @@ export default function Navigation() {
       </div>
 
       <NavigationMenu>
-        <NavigationMenuList className="hidden sm:flex sm:flex-row">
+        <NavigationMenuList className="hidden sm:flex sm:flex-row select-none">
           <NavigationMenuItem>
             <Link href={"/"} className={navigationMenuTriggerStyle()}>
               Главная
@@ -111,11 +111,11 @@ export default function Navigation() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger>О нас</NavigationMenuTrigger>
-            <NavigationMenuContent>
+            <NavigationMenuContent className="select-none">
               <ul className="grid gap-3 p-4 w-full md:w-[400px]">
                 <Link
                   href="/about"
-                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                  className="block  space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-neutral-100 focus:bg-neutral-100"
                 >
                   <div className="text-sm font-medium leading-none">
                     <Users2 className=" h-4 w-4 mr-1 mb-0.5 inline-block" />
@@ -127,7 +127,7 @@ export default function Navigation() {
                 </Link>
                 <Link
                   href="/gallery"
-                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                  className="block  space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-neutral-100 focus:bg-neutral-100"
                 >
                   <div className="text-sm font-medium leading-none">
                     <ImageIcon className="w-4 h-4 mr-1 mb-0.5 inline-block" />
@@ -138,8 +138,8 @@ export default function Navigation() {
                   </p>
                 </Link>
                 <Link
-                  href="#contact"
-                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                  href="/contact"
+                  className="block  space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-neutral-100 focus:bg-neutral-100"
                 >
                   <div className="text-sm font-medium leading-none">
                     <Map className="w-4 h-4 mr-1 mb-0.5 inline-block" />
