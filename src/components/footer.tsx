@@ -1,10 +1,10 @@
 import { Phone } from "lucide-react";
-import telegramIcon from "../../public/telegram-logo.svg";
-import vkIcon from "../../public/vk-logo.svg";
-import whatsappIcon from "../../public/whatsapp-logo.svg";
+import telegramIcon from "../../public/icons/telegram-icon.svg";
+import vkIcon from "../../public/icons/vk-icon.svg";
+import whatsappIcon from "../../public/icons/whatsapp-icon.svg";
 import logotype from "../../public/logotype.svg";
 import Image from "next/image";
-import mapPin from "../../public/pin-icon.svg";
+import mapPin from "../../public/icons/pin-icon.svg";
 import ExternalLink from "./external-link";
 import Link from "next/link";
 

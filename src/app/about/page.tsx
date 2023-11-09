@@ -37,7 +37,7 @@ export default function AboutPage() {
           <div className="mb-6 mt-8 sm:col-span-2 sm:col-start-1 sm:row-start-1 sm:mb-8 sm:mt-auto">
             <div className="relative aspect-video overflow-hidden sm:rounded-2xl">
               <Image
-                src={"/photos/bw/section-3.jpg"}
+                src={"/gallery/section-3.jpg"}
                 fill
                 alt="команда"
                 className="object-cover"
