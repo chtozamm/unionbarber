@@ -57,7 +57,7 @@ export default function Team() {
       {team.map((member) => (
         <div key={member.name} className="flex gap-3 group w-full">
           <Avatar>
-            <AvatarImage src={"member.image"} alt={member.name} />
+            {/* <AvatarImage src={member.image} alt={member.name} /> */}
             <AvatarFallback>{member.name[0]}</AvatarFallback>
           </Avatar>
           <div className="text-left group-hover:text-zinc-600 duration-300 sm:pr-8">

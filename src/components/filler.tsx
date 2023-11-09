@@ -50,7 +50,7 @@ export default function Filler() {
             </p>
           </Link>
           <Link
-            href="/#contact"
+            href="/contact"
             className="block space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gradient-to-r hover:from-zinc-50 hover:to-zinc-100 focus:bg-zinc-50"
           >
             <div className="text-sm font-medium leading-none">
