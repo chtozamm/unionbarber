@@ -20,9 +20,9 @@ export default function AboutPage() {
             />
           </div>
           <section className="flex max-w-[470px] flex-col justify-between px-6 text-sm sm:col-start-1 sm:row-start-2 sm:rounded-2xl sm:bg-gradient-to-b sm:from-gray-50 sm:to-gray-100 sm:py-6 sm:pt-6">
-            <h3 className="text-xl font-semibold tracking-tight sm:text-3xl">
+            <h2 className="text-xl font-semibold tracking-tight sm:text-3xl">
               О нас:
-            </h3>
+            </h2>
             <p className="mt-6 leading-5 sm:mt-6">
               Делаем мужские и детские стрижки, стрижем бороды, бреем лица.
             </p>

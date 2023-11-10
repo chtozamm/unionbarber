@@ -48,9 +48,9 @@ const team = [
 export default function Team() {
   return (
     <div id="team" className="flex w-full scroll-m-4 flex-col gap-4 px-6">
-      <h3 className="mb-2 text-lg font-semibold tracking-tight md:text-xl lg:mb-4">
+      <h2 className="mb-2 text-lg font-semibold tracking-tight md:text-xl lg:mb-4">
         Наша команда:
-      </h3>
+      </h2>
       {team.map((member) => (
         <div key={member.name} className="group flex w-full gap-3">
           <Avatar>

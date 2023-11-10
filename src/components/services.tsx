@@ -53,9 +53,9 @@ export default function Services() {
       id="services"
       className="-mb-8 flex w-full scroll-m-6 flex-col gap-4"
     >
-      <h3 className="mx-auto mb-2 w-fit text-center text-lg font-semibold tracking-tight md:text-xl lg:mb-4">
+      <h2 className="mx-auto mb-2 w-fit text-center text-lg font-semibold tracking-tight md:text-xl lg:mb-4">
         Наши услуги:
-      </h3>
+      </h2>
       <Table className="text-xs md:text-sm">
         <TableCaption className="mt-8 w-full text-xs font-normal leading-4 lg:mt-12 ">
           <Sheet>

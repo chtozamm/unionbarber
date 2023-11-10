@@ -15,8 +15,8 @@ export default function Footer() {
       className="mx-auto mt-8 grid max-w-[1100px] grid-cols-2 justify-items-center gap-2 border-t px-6 py-8 text-xs text-gray-500 md:grid-cols-3 lg:py-12"
     >
       <section className="flex w-full flex-col items-center justify-center">
-        <h4 className="font-semibold tracking-tight">Контакты:</h4>
-        <ul className="mt-4 flex flex-col gap-1.5">
+        <h3 className="font-semibold tracking-tight">Контакты:</h3>
+        <section className="mt-4 flex flex-col gap-1.5">
           <ExternalLink
             url="https://yandex.ru/maps/-/CDqVI~q"
             address="Кузнецкая улица, 17/2"
@@ -53,18 +53,18 @@ export default function Footer() {
               +7 (995) 240-13-40
             </span>
           </a>
-        </ul>
+        </section>
       </section>
       <section className="flex w-full flex-col items-center">
-        <h4 className="font-semibold tracking-tight">Социальные сети:</h4>
-        <ul className="mt-4 flex flex-col gap-1.5">
+        <h3 className="font-semibold tracking-tight">Социальные сети:</h3>
+        <section className="mt-4 flex flex-col gap-1.5">
           <ExternalLink
             url="https://vk.com/union_barbershop"
             address="VK"
             title="Перейти на сайт vk.com?"
             label="Продолжить"
             image={vkIcon}
-            alt="VK"
+            alt="icon"
             sizes="h-4 w-4"
           />
           <ExternalLink
@@ -73,7 +73,7 @@ export default function Footer() {
             title="Перейти в Telegram?"
             label="Продолжить"
             image={telegramIcon}
-            alt="Telegram"
+            alt="icon"
             sizes="w-4 h-4"
           />
           <ExternalLink
@@ -82,10 +82,10 @@ export default function Footer() {
             title="Перейти в WhatsApp?"
             label="Продолжить"
             image={whatsappIcon}
-            alt="WhatsApp"
+            alt="icon"
             sizes="w-4 h-4"
           />
-        </ul>
+        </section>
       </section>
       <section className="col-span-2 mt-8 flex w-full flex-col items-center justify-center gap-2 md:col-span-1 md:mt-0">
         <Link href="/">

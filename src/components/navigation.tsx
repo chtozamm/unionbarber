@@ -22,6 +22,7 @@ export default function Navigation() {
   return (
     <>
       <button
+        aria-label="Меню"
         className="flex items-center justify-start gap-1 p-4 sm:hidden"
         onClick={() => setMenuOpened(!menuOpened)}
       >

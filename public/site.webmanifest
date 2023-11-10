@@ -1,6 +1,7 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Union Barbershop",
+    "short_name": "Union",
+    "start_url": "https://www.unionbarber.ru",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
