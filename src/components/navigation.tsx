@@ -88,7 +88,7 @@ export default function Navigation() {
           <Image
             src="/gallery.jpg"
             fill
-            alt="Галерея"
+            alt=""
             className="object-cover"
           />
           <span className="absolute mr-1 w-full bg-[rgba(0,0,0,40%)] py-3 text-center text-xs text-white">
