@@ -10,4 +10,4 @@ A static website made for a local barbershop. <br>
 Index page contains hero image, "make a reservation" button, price, navigation, and contacts in footer.
 
 
-Created with [Next.js](https://nextjs.org/) and hosted on [Vercel](https://vercel.com/).
+Created with [Next.js](https://nextjs.org/) and hosted on [Vercel](https://vercel.com/). Styled with [Tailwind CSS](https://tailwindcss.com/) and [shadcn-ui](https://ui.shadcn.com/) component library.
