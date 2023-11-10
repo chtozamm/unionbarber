@@ -33,7 +33,7 @@ export default function Album() {
       className="mb-4 flex w-screen max-w-[1100px] select-none scroll-m-4 flex-col gap-1 md:gap-3 md:px-6"
     >
       <div className=" relative aspect-video overflow-hidden bg-gray-100 md:rounded-2xl">
-        <Image src="/gallery/wide-1.jpg" fill alt="" />
+        <Image src="/gallery/wide-1.jpg" fill alt="" priority />
       </div>
       <div className="xs:grid-cols-2 grid grid-cols-2 gap-x-1 gap-y-1 md:grid-cols-3 md:gap-x-3 md:gap-y-3 lg:grid-cols-3">
         {pictures.map((picture) => (
