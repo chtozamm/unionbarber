@@ -15,7 +15,7 @@ export default function Footer() {
       className="mx-auto mt-8 grid max-w-[1100px] grid-cols-2 justify-items-center gap-2 border-t px-6 py-8 text-xs text-gray-500 md:grid-cols-3 lg:py-12"
     >
       <section className="flex w-full flex-col items-center justify-center">
-        <h3 className="font-semibold tracking-tight">Контакты:</h3>
+        <h2 className="font-semibold tracking-tight">Контакты:</h2>
         <section className="mt-4 flex flex-col gap-1.5">
           <ExternalLink
             url="https://yandex.ru/maps/-/CDqVI~q"
@@ -56,7 +56,7 @@ export default function Footer() {
         </section>
       </section>
       <section className="flex w-full flex-col items-center">
-        <h3 className="font-semibold tracking-tight">Социальные сети:</h3>
+        <h2 className="font-semibold tracking-tight">Социальные сети:</h2>
         <section className="mt-4 flex flex-col gap-1.5">
           <ExternalLink
             url="https://vk.com/union_barbershop"
