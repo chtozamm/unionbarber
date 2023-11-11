@@ -3,11 +3,14 @@
 A static website made for a local barbershop. <br>
 [https://www.unionbarber.ru/](https://www.unionbarber.ru/)
 
-![Screenshot of a website](https://github.com/chtozamm/unionbarber/assets/105600239/18ea6813-c4d2-4c8f-b20a-33d46d1b21bf)
 
 ## Structure
 
-Index page contains hero image, "make a reservation" button, price, navigation, and contacts in footer.
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Deployment**: [Vercel](https://vercel.com)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com)
+- **UI components**: [shadcn/ui](https://ui.shadcn.com/)
 
+<br>
 
-Created with [Next.js](https://nextjs.org/) and hosted on [Vercel](https://vercel.com/). Styled with [Tailwind CSS](https://tailwindcss.com/) and [shadcn-ui](https://ui.shadcn.com/) component library.
+![Screenshot of a website](https://github.com/chtozamm/unionbarber/assets/105600239/cd2a18cc-5f97-4ac6-9870-b80c551a4117)
