@@ -11,7 +11,7 @@ export default function Hero() {
           src="/hero.jpg"
           fill={true}
           className="pointer-events-none select-none brightness-50"
-          sizes={"(max-width: 375px) 375px, (max-width: 640px): 640px, 1100px"}
+          sizes="(max-width: 375px) 375px, (max-width: 640px): 640px, 1100px"
           alt="Барбер делает стрижку клиенту в фирменной футболке Union Barbershop"
           priority
         />

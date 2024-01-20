@@ -10,7 +10,7 @@ export default function Filler() {
           <Link href="/about" className="">
             <div className="flex h-full w-full flex-col justify-end rounded-md bg-gradient-to-b from-gray-50 to-gray-100 p-6 md:rounded-2xl">
               <div className="relative h-20 w-20 select-none">
-                <Image src={"logotype.svg"} alt="логотип" sizes="80px" fill />
+                <Image src="logotype.svg" alt="логотип" sizes="80px" fill priority />
               </div>
               <div className="text-md mb-2 mt-4 font-medium leading-5 sm:text-lg">
                 Барбершоп Юнион
@@ -50,7 +50,7 @@ export default function Filler() {
             </p>
           </Link>
           <Link
-            href="/contact"
+            href="/#contact"
             className="block space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 focus:bg-gray-50"
           >
             <div className="text-sm font-medium leading-none">

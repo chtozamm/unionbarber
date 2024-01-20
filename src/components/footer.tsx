@@ -1,10 +1,5 @@
 import { Phone } from "lucide-react";
-import telegramIcon from "../../public/icons/telegram-icon.svg";
-import vkIcon from "../../public/icons/vk-icon.svg";
-import whatsappIcon from "../../public/icons/whatsapp-icon.svg";
-import logotype from "../../public/logotype.svg";
 import Image from "next/image";
-import mapPin from "../../public/icons/pin-icon.svg";
 import ExternalLink from "./external-link";
 import Link from "next/link";
 
@@ -22,7 +17,7 @@ export default function Footer() {
             address="Кузнецкая улица, 17/2"
             title="Открыть адрес в Яндекс Картах?"
             label="Продолжить"
-            image={mapPin}
+            image="pin"
             alt="На карте"
             sizes="w-3 h-3"
           />
@@ -40,7 +35,7 @@ export default function Footer() {
             address="Балтийская улица, 14Б"
             title="Открыть адрес в Яндекс Картах?"
             label="Продолжить"
-            image={mapPin}
+            image="pin"
             alt="На карте"
             sizes="w-3 h-3"
           />
@@ -63,7 +58,7 @@ export default function Footer() {
             address="VK"
             title="Перейти на сайт vk.com?"
             label="Продолжить"
-            image={vkIcon}
+            image="vk"
             alt="icon"
             sizes="h-4 w-4"
           />
@@ -72,7 +67,7 @@ export default function Footer() {
             address="Telegram"
             title="Перейти в Telegram?"
             label="Продолжить"
-            image={telegramIcon}
+            image="telegram"
             alt="icon"
             sizes="w-4 h-4"
           />
@@ -81,7 +76,7 @@ export default function Footer() {
             address="WhatsApp"
             title="Перейти в WhatsApp?"
             label="Продолжить"
-            image={whatsappIcon}
+            image="whatsapp"
             alt="icon"
             sizes="w-4 h-4"
           />
@@ -90,7 +85,13 @@ export default function Footer() {
       <section className="col-span-2 mt-8 flex w-full flex-col items-center justify-center gap-2 md:col-span-1 md:mt-0">
         <Link href="/">
           <div className="relative h-16 w-16 select-none">
-            <Image src={logotype} alt="логотип" fill sizes="64px" />
+              <Image
+                src="/logotype.svg"
+                fill
+                sizes="64px"
+                priority
+                alt="Юнион барбершоп"
+              />
           </div>
         </Link>
         <span className="">© Union Barbershop 2023</span>

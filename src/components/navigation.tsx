@@ -45,21 +45,21 @@ export default function Navigation() {
       >
         <nav className="relative flex flex-col items-start justify-start gap-3">
           <Link
-            href={"/"}
+            href="/"
             className="bg-background group flex h-9 w-full items-center justify-start gap-1.5 rounded-none border-b p-0 px-4 py-2 text-xs font-medium text-gray-900 hover:bg-white"
             onClick={() => setMenuOpened(false)}
           >
             <span>Главная</span>
           </Link>
           <Link
-            href={"/#services"}
+            href="/#services"
             className="bg-background group flex h-9 w-full items-center justify-start gap-1.5 rounded-none border-b p-0 px-4 py-2 text-xs font-medium text-gray-900 hover:bg-white"
             onClick={() => setMenuOpened(false)}
           >
             <span>Услуги</span>
           </Link>
           <Link
-            href={"/about"}
+            href="/about"
             className="bg-background group flex h-9 w-full items-center justify-start gap-1.5 rounded-none border-b p-0 px-4 py-2 text-xs font-medium text-gray-900 hover:bg-white"
             onClick={() => setMenuOpened(false)}
           >
@@ -101,12 +101,12 @@ export default function Navigation() {
       <NavigationMenu>
         <NavigationMenuList className="hidden select-none sm:flex sm:flex-row">
           <NavigationMenuItem>
-            <Link href={"/"} className={navigationMenuTriggerStyle()}>
+            <Link href="/" className={navigationMenuTriggerStyle()}>
               Главная
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href={"/#services"} className={navigationMenuTriggerStyle()}>
+            <Link href="/#services" className={navigationMenuTriggerStyle()}>
               Услуги
             </Link>
           </NavigationMenuItem>
@@ -139,7 +139,7 @@ export default function Navigation() {
                   </p>
                 </Link>
                 <Link
-                  href="/contact"
+                  href="#contact"
                   className="block  space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-100 focus:bg-gray-100"
                 >
                   <div className="text-sm font-medium leading-none">

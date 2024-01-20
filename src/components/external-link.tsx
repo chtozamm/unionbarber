@@ -33,7 +33,7 @@ export default function ExternalLink({
   return (
     <AlertDialog>
       <AlertDialogTrigger className="flex select-text items-center gap-1.5 text-left text-gray-500 transition-colors duration-150 ease-in-out hover:text-gray-700 focus-visible:text-gray-700 focus-visible:outline-none">
-        <Image src={image} alt={alt} className={`${sizes} select-none`} />
+        <Image src={`/icons/${image}.svg`} alt={alt} className={`${sizes} select-none`} width={12} height={12} />
         {address}
       </AlertDialogTrigger>
       <AlertDialogContent>
