@@ -1,4 +1,3 @@
-import Picture from "@/components/picture";
 import { Metadata } from "next";
 import Team from "./team";
 import Image from "next/image";
@@ -13,10 +12,12 @@ export default function AboutPage() {
       <section id="about" className="w-screen sm:mb-6 sm:w-full">
         <div className="flex flex-col gap-3 sm:grid sm:grid-cols-2">
           <div className="relative aspect-video overflow-hidden sm:col-span-1 sm:row-start-3 sm:my-auto sm:hidden sm:max-w-[470px]">
-            <Picture
-              title="Логотип Юнион Барбершоп"
+            <Image
+              alt="Логотип Юнион Барбершоп"
               src="/logotype.svg"
               className="select-none"
+              fill
+              priority
             />
           </div>
           <section className="flex max-w-[470px] flex-col justify-between px-6 text-sm sm:col-start-1 sm:row-start-2 sm:rounded-2xl sm:bg-gradient-to-b sm:from-gray-50 sm:to-gray-100 sm:py-6 sm:pt-6">
@@ -31,19 +32,20 @@ export default function AboutPage() {
               уходу за волосами, бесплатные напитки и хорошее настроение.
             </p>
             <div className="relative ml-auto mt-8 hidden h-32 w-32 select-none sm:block">
-              <Image src={"logotype.svg"} alt="логотип" sizes="80px" fill />
+              <Image src="logotype.svg" alt="логотип" sizes="80px" fill priority />
             </div>
           </section>
-          <div className="mb-6 mt-8 sm:col-span-2 sm:col-start-1 sm:row-start-1 sm:mb-8 sm:mt-auto">
+          {/* <div className="mb-6 mt-8 sm:col-span-2 sm:col-start-1 sm:row-start-1 sm:mb-8 sm:mt-auto">
             <div className="relative aspect-video overflow-hidden sm:rounded-2xl">
               <Image
-                src={"/gallery/section-3.jpg"}
-                fill
+                src="/gallery/section-3.jpg"
                 alt="команда"
                 className="object-cover"
+                fill
+                priority
               />
             </div>
-          </div>
+          </div> */}
           <section className="sm:col-start-2 sm:row-start-2">
             <Team />
           </section>
