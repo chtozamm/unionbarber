@@ -94,7 +94,7 @@ export default function Footer() {
               />
           </div>
         </Link>
-        <span className="">© Union Barbershop 2023</span>
+        <span className="">© Union Barbershop 2024</span>
       </section>
     </footer>
   );
