@@ -11,40 +11,39 @@ import { Baby, RussianRuble } from "lucide-react";
 import { ChevronRight } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Balancer from "react-wrap-balancer";
-import Link from "next/link";
 
 export default function Services() {
   const services = [
-    { name: "Стрижка", price_premium: 1400, price_pro: 1000, price_young: 700 },
+    { name: "Стрижка", price_premium: 1600, price_pro: 1400, price_young: 1200 },
     {
       name: "Стрижка бороды",
-      price_premium: 800,
-      price_pro: 600,
-      price_young: 400,
-    },
-    {
-      name: "Комплекс: стрижка + борода",
-      price_premium: 1800,
-      price_pro: 1200,
-      price_young: 900,
-    },
-    {
-      name: "Детская стрижка",
-      price_premium: 1400,
-      price_pro: 1000,
-      price_young: 700,
-    },
-    {
-      name: "Стрижка под машинку",
-      price_premium: 1100,
+      price_premium: 1000,
       price_pro: 800,
       price_young: 600,
     },
     {
+      name: "Комплекс: стрижка + борода",
+      price_premium: 2200,
+      price_pro: 1800,
+      price_young: 1600,
+    },
+    {
+      name: "Детская стрижка",
+      price_premium: 1600,
+      price_pro: 1400,
+      price_young: 1200,
+    },
+    {
+      name: "Стрижка машинкой",
+      price_premium: 1300,
+      price_pro: 1100,
+      price_young: 900,
+    },
+    {
       name: "Бритье головы/лица",
       price_premium: 1000,
-      price_pro: 600,
-      price_young: 600,
+      price_pro: 1000,
+      price_young: 1000,
     },
   ];
 
@@ -89,9 +88,9 @@ export default function Services() {
         <TableHeader>
           <TableRow>
             <TableHead className="">Услуга</TableHead>
-            <TableHead className="text-right">Главный барбер</TableHead>
+            <TableHead className="text-right">Управляющий барбер</TableHead>
             <TableHead className="text-right">Старший барбер</TableHead>
-            <TableHead className="text-right">Младший барбер</TableHead>
+            <TableHead className="text-right">Барбер</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>

@@ -3,13 +3,13 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 const team = [
   {
     name: "Севастьян",
-    position: "Главный барбер",
+    position: "Управляющий барбер",
     image: "avatars/sevastian.jpg",
     description: "Параграф о сотруднике",
   },
   {
     name: "Руслан",
-    position: "Главный барбер",
+    position: "Управляющий барбер",
     image: "avatars/ruslan.jpg",
     description: "Параграф о сотруднике",
   },
@@ -27,20 +27,26 @@ const team = [
   },
   {
     name: "Владислав",
-    position: "Младший барбер",
+    position: "Старший барбер",
     image: "avatars/vladislav.jpg",
     description: "Параграф о сотруднике",
   },
   {
     name: "Кирилл",
-    position: "Младший барбер",
+    position: "Старший барбер",
     image: "avatars/kirill.jpg",
     description: "Параграф о сотруднике",
   },
   {
-    name: "Максим",
-    position: "Администратор",
-    image: "avatars/maxim.jpg",
+    name: "Артем",
+    position: "Барбер",
+    image: "avatars/artem.jpg",
+    description: "Параграф о сотруднике",
+  },
+  {
+    name: "Вадим",
+    position: "Барбер",
+    image: "avatars/vadim.jpg",
     description: "Параграф о сотруднике",
   },
 ];
