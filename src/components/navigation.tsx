@@ -75,7 +75,7 @@ export default function Navigation() {
                 width="100%"
                 className="scale-90 rounded-2xl"
                 id="ms_booking_iframe"
-                src="https://w891186.yclients.com/"
+                src="https://n891186.yclients.com/select-city/109/select-branch?o="
               ></iframe>
             </SheetContent>
           </Sheet>
@@ -164,7 +164,7 @@ export default function Navigation() {
                   width="100%"
                   className="scale-90 rounded-2xl"
                   id="ms_booking_iframe"
-                  src="https://w891186.yclients.com/"
+                  src="https://n891186.yclients.com/select-city/109/select-branch?o="
                 ></iframe>
               </SheetContent>
             </Sheet>
